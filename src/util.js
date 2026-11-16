@@ -73,7 +73,16 @@ import { Agent, fetch as ufetch } from 'undici';
 export function isPublicIp(addr) {
   if (!ipaddr.isValid(addr)) return false;
   let ip = ipaddr.parse(addr);
-  if (ip.kind() === 'ipv6' && ip.isIPv4MappedAddress()) ip = ip.toIPv4Address();
+  if (ip.kind() === 'ipv6') {
+    if (ip.isIPv4MappedAddress()) ip = ip.toIPv4Address();
+    else {
+      // Deny by default: only global unicast IPv6 (2000::/3), excluding NAT64 (64:ff9b::/96, 64:ff9b:1::/48 are outside
+      // 2000::/3 anyway), 6to4 (2002::/16) and Teredo (2001::/32), which embed other addresses.
+      if (!ip.match(ipaddr.parseCIDR('2000::/3'))) return false;
+      if (ip.match(ipaddr.parseCIDR('2002::/16')) || ip.match(ipaddr.parseCIDR('2001::/32'))) return false;
+      return ip.range() === 'unicast';
+    }
+  }
   return ip.range() === 'unicast';
 }
 

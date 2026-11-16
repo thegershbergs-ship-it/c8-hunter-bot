@@ -57,8 +57,8 @@ test('AI answer parsing is defensive', () => {
 
 test('SSRF: IP classification incl. mapped/NAT64/6to4 and DNS-resolved blocking', async () => {
   const { isPublicIp, safeFetch } = await import('../src/util.js');
-  for (const bad of ['127.0.0.1', '10.0.0.1', '100.64.0.1', '169.254.169.254', '::1', 'fd00::1', 'fe80::1', '::ffff:127.0.0.1', '64:ff9b::7f00:1', '2002:7f00:1::', '0.0.0.0']) assert.equal(isPublicIp(bad), false, bad);
-  assert.equal(isPublicIp('8.8.8.8'), true);
+  for (const bad of ['127.0.0.1', '10.0.0.1', '100.64.0.1', '169.254.169.254', '::1', 'fd00::1', 'fe80::1', '::ffff:127.0.0.1', '64:ff9b::7f00:1', '2002:7f00:1::', '0.0.0.0', '::7f00:1', '64:ff9b:1::7f00:1', '2001:0:4136:e378:8000:63bf:3fff:fdd2', '100::1']) assert.equal(isPublicIp(bad), false, bad);
+  assert.equal(isPublicIp('8.8.8.8'), true); assert.equal(isPublicIp('2607:f8b0:4004:800::200e'), true);
   assert.equal(isPublicHttpUrl('http://2130706433/'), false);
   await assert.rejects(safeFetch('http://localtest.me/', {}, { retries: 0, timeoutMs: 5000 }));
 });
