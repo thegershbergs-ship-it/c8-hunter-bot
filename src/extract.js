@@ -21,6 +21,10 @@ export function colorFamily(name, table = EXT_COLORS) {
   return 'other';
 }
 
+// Only accept color text that actually contains a color word (pages have many "Color:" labels).
+const COLOR_WORD = /\b(black|red|mist|torch|blue|yellow|silver|white|gr[ae]y|orange|bronze|caffeine|green|purple|tan|natural|caramel|brown|artemis|adrenaline|morello|tension|twilight|santorini|sky cool|ceramic|pearl|flare|matrix|sebring|zeus|cacti|hysteria|elkhart|riptide|rapid|accelerate|blade|arctic|shadow|hypersonic|sea ?wolf|jet|beige|gold|maroon|burgundy)\b/i;
+export const isColorWord = (s) => COLOR_WORD.test(String(s || ""));
+const C8_EXT_NAMES = /\b(Torch Red|Red Mist(?: Metallic)?(?: Tintcoat)?|Long Beach Red(?: Metallic)?(?: Tintcoat)?|Radiant Red(?: Tintcoat)?|Elkhart Lake Blue(?: Metallic)?|Rapid Blue|Riptide Blue(?: Metallic)?|Accelerate Yellow(?: Metallic)?|Blade Silver(?: Metallic)?|Silver Flare(?: Metallic)?|Arctic White|White Pearl(?: Metallic)?(?: Tricoat)?|Ceramic Matrix Gray(?: Metallic)?|Shadow Gray(?: Metallic)?|Hypersonic Gray(?: Metallic)?|Sea Wolf Gray(?: Tricoat)?|Zeus Bronze(?: Metallic)?|Sebring Orange(?: Tintcoat)?|Amplify Orange(?: Tintcoat)?|Caffeine(?: Metallic)?|Cacti Green|Hysteria Purple(?: Metallic)?)\b/i;
 const num = (s) => Number(String(s).replace(/[^0-9.]/g, ''));
 
 /** Parse useful fields from free text (listing description, email snippet, pasted text). */
@@ -42,11 +46,13 @@ export function parseText(text) {
   if (mi) { const v = /k$/i.test(mi[1]) ? num(mi[1]) * 1000 : num(mi[1]); if (v >= 0 && v < 400000) out.miles = v; }
   const vins = findVins(t); if (vins.length) { out.vin = vins[0]; out.vinCandidates = vins; }
   const ext = t.match(/\b(?:exterior(?: color)?|ext\.?(?: color)?|color)\s*:?\s*([A-Za-z][A-Za-z ]{2,30}?)(?=\s*(?:\||,|;|interior|int\.|$|\.|\n|mileage|vin|transmission))/i);
-  if (ext) out.extColorName = ext[1].trim();
+  if (ext && isColorWord(ext[1])) out.extColorName = ext[1].trim();
+  else { const named = t.match(C8_EXT_NAMES); if (named) out.extColorName = named[0]; }
   const int = t.match(/\b(?:interior(?: color)?|int\.?(?: color)?)\s*:?\s*([A-Za-z][A-Za-z ]{2,30}?)(?=\s*(?:\||,|;|exterior|$|\.|\n|mileage|vin|transmission|seats?))/i);
-  if (int) out.intColorName = int[1].trim();
+  if (int && isColorWord(int[1])) out.intColorName = int[1].trim();
   const loc = t.match(/\b([A-Z][a-zA-Z.' -]{2,25}),\s*([A-Z]{2})\b(?:\s+(\d{5}))?/);
   if (loc && STATES.has(loc[2])) { out.city = loc[1].trim(); out.state = loc[2]; if (loc[3]) out.zip = loc[3]; }
+  if (!out.state) { const sn = t.match(/\b(?:for sale in|located in|location:?)s+([A-Z][a-z]+(?: [A-Z][a-z]+)?)\b/); if (sn && STATE_NAMES[sn[1].toLowerCase()]) out.state = STATE_NAMES[sn[1].toLowerCase()]; }
   const zip = t.match(/\b[A-Z]{2}\s+(\d{5})(?:-\d{4})?\b/); if (zip && !out.zip) out.zip = zip[1];
   const owners = t.match(/\b(one|1|single|two|2|three|3|four|4)[- ]owner\b/i);
   if (owners) out.ownersClaim = { one: 1, '1': 1, single: 1, two: 2, '2': 2, three: 3, '3': 3, four: 4, '4': 4 }[owners[1].toLowerCase()];
@@ -68,6 +74,7 @@ export function optionClaimsFromText(t) {
   return o;
 }
 
+const STATE_NAMES = Object.fromEntries('alabama AL,alaska AK,arizona AZ,arkansas AR,california CA,colorado CO,connecticut CT,delaware DE,florida FL,georgia GA,hawaii HI,idaho ID,illinois IL,indiana IN,iowa IA,kansas KS,kentucky KY,louisiana LA,maine ME,maryland MD,massachusetts MA,michigan MI,minnesota MN,mississippi MS,missouri MO,montana MT,nebraska NE,nevada NV,new hampshire NH,new jersey NJ,new mexico NM,new york NY,north carolina NC,north dakota ND,ohio OH,oklahoma OK,oregon OR,pennsylvania PA,rhode island RI,south carolina SC,south dakota SD,tennessee TN,texas TX,utah UT,vermont VT,virginia VA,washington WA,west virginia WV,wisconsin WI,wyoming WY'.split(',').map((x) => { const i = x.lastIndexOf(' '); return [x.slice(0, i), x.slice(i + 1)]; }));
 const STATES = new Set('AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY'.split(' '));
 
 /** Extract from a full listing web page (JSON-LD first, then meta tags, then visible text). */
@@ -97,6 +104,9 @@ export function parsePage(html, url) {
     }
   });
   const meta = (p) => $(`meta[property="${p}"]`).attr('content') || $(`meta[name="${p}"]`).attr('content');
+  // Structured data is sometimes placeholder junk (fake VIN, $0 price): drop it so the visible text wins.
+  if (out.vin && !isValidVin(out.vin)) delete out.vin;
+  if (!out.price) delete out.price;
   out.title ||= meta('og:title') || $('title').text();
   const ogImg = meta('og:image'); if (ogImg) out.photos.push(ogImg);
   $('img').each((_, el) => { const s = $(el).attr('data-src') || $(el).attr('src') || ''; if (/^https?:\/\//.test(s) && /\.(jpe?g|webp|png)(\?|$)/i.test(s) && !/logo|icon|sprite|badge|avatar/i.test(s)) out.photos.push(s); });
@@ -104,6 +114,7 @@ export function parsePage(html, url) {
   $('script,style,noscript,svg').remove();
   const text = $('body').text().replace(/\s+/g, ' ').trim();
   out.pageText = text.slice(0, 12000);
+  if (!out.description) { const di = text.search(/\b(?:Description|Vehicle Description|Seller'?s? Notes|Dealer Comments)\s*:?/i); if (di >= 0) { let d = text.slice(di, di + 1800).replace(/^\S+(\s+Description)?\s*:?\s*/i, ''); const end = d.search(/\b(Seller Info|Contact Seller|Email Seller|Disclaimer)\b/i); if (end > 0) d = d.slice(0, end); if (d.length > 40) out.description = d.trim(); } }
   const fromText = parseText(`${out.title || ''} ${text}`);
   for (const [k, v] of Object.entries(fromText)) if (out[k] === undefined || out[k] === null || out[k] === '') out[k] = v;
   if (out.trimName && !out.trim) { const m = String(out.trimName).match(/\b([123])LT\b/i); if (m) out.trim = `${m[1]}LT`; }

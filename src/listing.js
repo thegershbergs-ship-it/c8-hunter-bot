@@ -6,7 +6,7 @@ export const SITE_PATTERNS = [
   ['autotrader', /autotrader\.com/i], ['carscom', /(^|\.)cars\.com/i], ['cargurus', /cargurus\.com/i], ['carmax', /carmax\.com/i],
   ['carvana', /carvana\.com/i], ['truecar', /truecar\.com/i], ['edmunds', /edmunds\.com/i], ['bringatrailer', /bringatrailer\.com/i],
   ['carsandbids', /carsandbids\.com/i], ['facebook', /facebook\.com|fb\.com|fb\.me/i], ['craigslist', /craigslist\.org/i],
-  ['chevrolet', /chevrolet\.com|gmcertified\.com/i], ['corvetteforum', /corvetteforum\.com/i], ['instagram', /instagram\.com/i],
+  ['chevrolet', /chevrolet\.com|gmcertified\.com/i], ['usedcorvettesforsale', /usedcorvettesforsale\.com/i], ['corvetteforum', /corvetteforum\.com/i], ['instagram', /instagram\.com/i],
 ];
 export function siteOf(url) {
   let host = '';

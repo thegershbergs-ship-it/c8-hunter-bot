@@ -26,6 +26,7 @@ export async function nhtsaRecalls(db, year) {
   if (c && daysBetween(c.at) < 7) return c.items;
   db.inc('nhtsa'); await sleep(1000);
   const res = await fetchRetry(`https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=CORVETTE&modelYear=${year}`);
+  if (res.status === 400 || res.status === 404) { db.d.cache.recalls[year] = { at: nowIso(), items: [] }; return []; } // NHTSA has no data for this year yet
   if (!res.ok) throw new Error('Recalls HTTP ' + res.status);
   const items = ((await res.json()).results || []).map((r) => ({ id: r.NHTSACampaignNumber, date: r.ReportReceivedDate, component: r.Component, summary: plain(r.Summary) }));
   db.d.cache.recalls[year] = { at: nowIso(), items };

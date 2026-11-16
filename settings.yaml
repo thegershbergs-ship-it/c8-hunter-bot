@@ -80,6 +80,7 @@ alerts:
   paused: false
   daily_summary: true       # one evening summary of new Watchlist-class cars
   daily_summary_hour: 19    # Eastern
+  email_match_min_prescore: 50   # cars seen only in an alert email get a short "New match" ping at/above this pre-score
 
 # --- Listing-page fetching policy per site ------------------------------------
 # never      = the bot will never fetch this site's pages (terms or robots forbid it)
@@ -96,6 +97,7 @@ sites:
   bringatrailer: {fetch: never}
   carsandbids:   {fetch: never}
   facebook:   {fetch: never}
+  usedcorvettesforsale: {fetch: auto}   # robots + terms allow bots (checked 2026-11-16); swept every 4 hours
   dealer:     {fetch: on_request}   # any other website (dealer sites, forums)
 fetch:
   min_seconds_between_requests_same_site: 3

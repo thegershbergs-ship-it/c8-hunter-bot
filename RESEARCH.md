@@ -38,7 +38,7 @@ Researched 2026-11-16. Anything here can change, so re-check the sources before 
 ### VIN structure (verified against the NHTSA decoder today)
 Example: `1G1Y B 2 D 4 x M 5 ######`
 - Positions 1–4 `1G1Y` = Chevrolet Corvette.
-- **Position 5 = series/trim:** `A` = Stingray 1LT, `B` = 2LT, `C` = 3LT, `D` = Z06 1LZ (Z06 2LZ/3LZ and E-Ray/ZR1 use other letters: anything that decodes as Z06/E-Ray/ZR1 is treated as "other variant").
+- **Position 5 = series/trim:** `A` (2021+) or `6` (2020) = Stingray 1LT, `B`/`7` = 2LT, `C`/`8` = 3LT, `D` = Z06 1LZ (Z06 2LZ/3LZ and E-Ray/ZR1 use other letters: anything that decodes as Z06/E-Ray/ZR1 is treated as "other variant").
 - **Position 6 = body:** `2` = coupe, `3` = convertible.
 - **Position 8 = engine:** `4` = LT2 6.2 L (Stingray), `3` = LT6 5.5 L (Z06).
 - Position 9 = check digit. Position 10 = model year (`L`=2020, `M`=2021, `N`=2022, `P`=2023, `R`=2024, `S`=2025, `T`=2026). Position 11 `5` = Bowling Green, KY.

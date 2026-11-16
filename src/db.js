@@ -36,7 +36,9 @@ export class DB {
   save(p = DB_PATH) {
     fs.mkdirSync(path.dirname(p), { recursive: true });
     const tmp = p + '.tmp';
-    fs.writeFileSync(tmp, JSON.stringify(this.d, null, 1));
+    // Never publish full third-party page text or history-report text (copyright + size); keep short descriptions only.
+    const strip = (k, v) => (k === 'pageText' || k === 'reportText' ? undefined : k === 'pastedText' || k === 'description' ? (typeof v === 'string' ? v.slice(0, 2000) : v) : v);
+    fs.writeFileSync(tmp, JSON.stringify(this.d, strip, 1));
     fs.renameSync(tmp, p);
   }
 

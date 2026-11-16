@@ -1,0 +1,108 @@
+name: C8 Hunter Bot
+
+on:
+  schedule:
+    - cron: "7 * * * *"      # quick check, hourly (GitHub may start it late)
+    - cron: "37 */4 * * *"   # full sweep, every 4 hours
+    - cron: "23 12 * * 0"    # weekly digest, Sunday ~7-8am Eastern
+    - cron: "41 9 1 * *"     # monthly keepalive (prevents the 60-day auto-disable)
+  push:
+    branches: [main]
+    paths-ignore: ["data/**", "*.md", "docs/**"]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to run"
+        type: choice
+        default: quick
+        options: [quick, sweep, digest, selftest, testalert, keepalive]
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    # Runs never overlap: a new run waits for the current one (only the newest waiting run is kept).
+    concurrency:
+      group: c8-hunter-bot
+      cancel-in-progress: false
+    steps:
+      - name: Pick mode
+        id: mode
+        run: |
+          case "${{ github.event.schedule }}" in
+            "37 */4 * * *") m=sweep ;;
+            "23 12 * * 0")  m=digest ;;
+            "41 9 1 * *")   m=keepalive ;;
+            "")             m="${{ inputs.mode || 'quick' }}" ;;
+            *)              m=quick ;;
+          esac
+          echo "mode=$m" >> "$GITHUB_OUTPUT"
+          echo "Mode: $m"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Install Claude Code CLI (uses YOUR subscription token; no API key)
+        if: steps.mode.outputs.mode != 'keepalive'
+        env:
+          HAS_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+        run: |
+          if [ "$HAS_TOKEN" = "true" ]; then npm install -g @anthropic-ai/claude-code --no-audit --no-fund >/dev/null 2>&1 && echo "Claude CLI installed"; else echo "No Claude token set; skipping"; fi
+
+      - name: Run bot
+        if: steps.mode.outputs.mode != 'keepalive'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          HOME_ZIP: ${{ secrets.HOME_ZIP }}
+          LOAN_APR: ${{ secrets.LOAN_APR }}
+          LOAN_DOWN: ${{ secrets.LOAN_DOWN }}
+          LOAN_MONTHS: ${{ secrets.LOAN_MONTHS }}
+          DISABLE_CLAUDE: ${{ vars.DISABLE_CLAUDE }}
+          DISABLE_GEMINI: ${{ vars.DISABLE_GEMINI }}
+        run: node src/main.js "${{ steps.mode.outputs.mode }}"
+
+      - name: Keepalive note
+        if: steps.mode.outputs.mode == 'keepalive'
+        run: date -u +"last alive: %Y-%m-%dT%H:%M:%SZ" > data/alive.txt
+
+      - name: Save database back to the repo
+        if: always()
+        run: |
+          git config user.name "c8-hunter-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data settings.yaml
+          if git diff --cached --quiet; then echo "Nothing to save"; exit 0; fi
+          git commit -q -m "bot: ${{ steps.mode.outputs.mode }} run $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3 4; do
+            git pull --rebase -X theirs -q origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && { echo "saved"; exit 0; }
+            echo "push failed, retry $i"; sleep $((i * 5))
+          done
+          echo "Could not save database"; exit 1
+
+  test:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - run: npm test

@@ -4,7 +4,7 @@
   "description": "Personal $0 C8 Corvette hunting bot (GitHub Actions + Telegram)",
   "main": "src/main.js",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test",
     "quick": "node src/main.js quick",
     "sweep": "node src/main.js sweep",
     "digest": "node src/main.js digest",

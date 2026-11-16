@@ -1,0 +1,3211 @@
+{
+ "version": 1,
+ "listings": {
+  "L172d0dbced": {
+   "id": "L172d0dbced",
+   "vin": null,
+   "vinValid": null,
+   "year": 2024,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "coupe",
+   "price": 99799,
+   "miles": 3933,
+   "extColorName": "Torch Red",
+   "intColorName": "Jet Black ",
+   "extColor": "red",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2024-Corvette-Coupe-94691.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:08.844Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/1_57.jpg",
+    "https://usedcorvettesforsale.com/files/small/1_57.jpg",
+    "https://usedcorvettesforsale.com/files/small/2_39.jpg",
+    "https://usedcorvettesforsale.com/files/small/3_50.jpg",
+    "https://usedcorvettesforsale.com/files/small/4_41.jpg",
+    "https://usedcorvettesforsale.com/files/small/5_50.jpg",
+    "https://usedcorvettesforsale.com/files/small/6_48.jpg",
+    "https://usedcorvettesforsale.com/files/small/7_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/8_49.jpg",
+    "https://usedcorvettesforsale.com/files/small/9_46.jpg",
+    "https://usedcorvettesforsale.com/files/small/10_58.jpg"
+   ],
+   "description": "2024 Chevrolet Corvette Z06 Coupe ONLY 3,900 MILES! 1 OWNER! Torch Red Exterior Jet Black Leather Interior 670HP 5.5L LT6 Flat Plane Crank V8 Engine 8-Speed Dual-Clutch Automatic Transmission Z07 Ground Effects Package Front Splitter , Rocker Panels Z07 Rear Spoiler Torch Red Seatbelts - Factory Option 21\" Rear 20\" Front Aluminum Wheels Removable Body-Color Roof Panel Magnetic Selective Ride Control Rear-Wheel Drive Stability & Traction Control System Remote Vehicle Start Jet Black Leather Seating Surfaces 8-Way Power GT Bucket Seats Dual-Zone Automatic Climate Control Leather-Wrapped Steering Wheel Power Windows with Express Up/Down Power Heated Outside Mirrors with Turn Indicators Rear Camera Mirror Floor Console with USB Ports Lockable Interior Storage Bose Premium 10-Speaker Audio System Chevrolet Infotainment 3 Premium System 8\" HD Color Touchscreen Wireless Apple CarPlay Wireless Android Auto Bluetooth Audio Streaming Wireless Phone Projection SiriusXM Audio with Trial Subscription Head-Up Display OnStar & Wi-Fi Data Capable Chevrolet Connected Services Torch Red Exterior Finish LED Headlamps Power Hood/Trunk Release Power Heated Outside Mirrors Removable Roof Panel HD Rear Vision Camera Rear Park Assist Theft Deterrent System IntelliBeam Automatic High Beams Following Distance Indicator Forward Collision Alert Lane Keep Assist with Lane Departure Warning Automatic Emergency Braking Please visit url below for more info / photos of this Vette:https://www.verrillomotorcar.com/used-vehicle-2024-chevrolet-corvette-z06-z07-appearance-package-c-897/",
+   "optionClaims": {
+    "MagRide": true
+   },
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:08.844Z",
+   "lastSeen": "2026-11-16T20:43:08.844Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:08.844Z",
+     "price": 99799,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:08.844Z",
+     "miles": 3933,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 99799 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 99799 over 58500"
+    ],
+    "redFlags": [
+     "price 99799 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:05.798Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2024 Chevrolet Corvette Coupe For Sale in New York",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:08.845Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "FrontLift": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "PerfExhaust": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YB2D42M5105131": {
+   "id": "1G1YB2D42M5105131",
+   "vin": "1G1YB2D42M5105131",
+   "vinValid": true,
+   "year": 2021,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Stingray",
+   "trim": "2LT",
+   "body": "coupe",
+   "price": null,
+   "miles": 29462,
+   "extColorName": "Torch Red",
+   "intColorName": "Adrenaline Red ",
+   "extColor": "red",
+   "intColor": "red",
+   "sellerName": null,
+   "sellerType": null,
+   "city": "S. Edgewater Park",
+   "state": "NJ",
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2021-Corvette-Coupe-94684.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:11.701Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/639294333411172961.jpg",
+    "https://usedcorvettesforsale.com/files/small/639294333411172961.jpg",
+    "https://usedcorvettesforsale.com/files/small/639294333368443408.jpg",
+    "https://usedcorvettesforsale.com/files/small/639294333370707172.jpg",
+    "https://usedcorvettesforsale.com/files/small/639294333386699938.jpg"
+   ],
+   "description": null,
+   "optionClaims": {},
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:11.701Z",
+   "lastSeen": "2026-11-16T20:43:11.701Z",
+   "status": "active",
+   "priceHistory": [],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:11.701Z",
+     "miles": 29462,
+     "source": "page"
+    }
+   ],
+   "failReasons": [],
+   "history": {
+    "at": "2026-11-16T20:44:05.829Z",
+    "checks": {
+     "vin": {
+      "value": "VIN 1G1YB2D42M5105131 check digit OK",
+      "truth": "verified",
+      "source": "check-digit math"
+     },
+     "decode": {
+      "value": "2021 CHEVROLET Corvette Preferred 2LT coupe, LT2 - ENGINE, Automatic 8, built BOWLING GREEN, KENTUCKY",
+      "truth": "verified",
+      "source": "NHTSA vPIC"
+     },
+     "recalls": {
+      "value": "2 recall(s) for 2021 Corvettes. Confirm completion by VIN with a Chevy dealer",
+      "truth": "verified",
+      "source": "NHTSA recalls API"
+     },
+     "report": {
+      "value": "No free CARFAX/AutoCheck link found",
+      "truth": "unknown",
+      "source": "listing"
+     },
+     "owners": {
+      "value": "1 owner(s)",
+      "truth": "claim",
+      "source": "listing text"
+     },
+     "accidents": {
+      "value": "Accident history unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "title": {
+      "value": "Title status unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "nicb": {
+      "value": "NICB VINCheck: tap the link (free, manual: theft & insurance total-loss records)",
+      "truth": "unknown",
+      "source": "manual"
+     },
+     "odometer": {
+      "value": "Only one mileage reading so far",
+      "truth": "claim",
+      "source": "bot history"
+     },
+     "warranty": {
+      "value": "bumper-to-bumper (3yr/36k) likely expired; powertrain (5yr/60k) likely expired",
+      "truth": "unknown",
+      "source": "estimate from model year + miles (confirm with a dealer by VIN)"
+     }
+    },
+    "recalls": [
+     {
+      "id": "21V421000",
+      "date": "10/06/2021",
+      "component": "AIR BAGS:SRS MALFUNCTION WARNING LAMP/LIGHT",
+      "summary": "The communications gateway module incorrectly processes a loss of communication with the sensing diagnostic module (SDM), causing the air bag malfunction indica"
+     },
+     {
+      "id": "22V091000",
+      "date": "17/02/2022",
+      "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+      "summary": "The rear half-shaft assemblies may be missing one or more ball bearings, which can result in a loss of drive power."
+     }
+    ],
+    "mismatches": [],
+    "serious": []
+   },
+   "eval": {
+    "ruleScore": 56,
+    "fvFarBelow": false,
+    "breakdown": {
+     "history": 14.1,
+     "price": 10,
+     "mechanical": 9.3,
+     "mileage": 10.7,
+     "options": 4.3,
+     "seller": 7.5
+    },
+    "confidence": "Low",
+    "unknowns": [
+     "title",
+     "accidents",
+     "history report",
+     "fair value",
+     "maintenance records",
+     "Z51"
+    ],
+    "scam": {
+     "level": "Medium",
+     "reasons": [
+      "Very few photos"
+     ]
+    },
+    "redFlags": [],
+    "yellowFlags": [],
+    "sellerType": null,
+    "score": 56,
+    "cls": "Reject",
+    "notes": [],
+    "aiAdjust": 0,
+    "aiReason": null,
+    "tier": "rules",
+    "aiPending": false,
+    "at": "2026-11-16T20:44:08.337Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2021 Chevrolet Corvette Coupe For Sale in New Jersey",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:11.702Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "PerfExhaust": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "vinDecode": {
+    "at": "2026-11-16T20:44:07.058Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2021,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "Preferred 2LT",
+    "series": "",
+    "body": "coupe",
+    "engine": "LT2 - ENGINE",
+    "displacement": "6.2",
+    "transmission": "Automatic 8",
+    "plant": "BOWLING GREEN, KENTUCKY",
+    "transmissionOk": true
+   },
+   "evalHistory": []
+  },
+  "1G1YF3D36S5604092": {
+   "id": "1G1YF3D36S5604092",
+   "vin": "1G1YF3D36S5604092",
+   "vinValid": true,
+   "year": 2025,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "convertible",
+   "price": 159989,
+   "miles": 3485,
+   "extColorName": "RED MIST METALLIC",
+   "intColorName": "JET BLACK ",
+   "extColor": "dark red",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2025-Corvette-Convertible-94669.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:14.696Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc06370.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06370.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06375.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06377.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06379.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06384.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06360.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06364.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06367.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06368.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06407.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06409.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06413.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06414.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06419.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06423_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06428.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06430.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06440.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06473.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06474.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:14.696Z",
+   "lastSeen": "2026-11-16T20:43:14.696Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:14.696Z",
+     "price": 159989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:14.696Z",
+     "miles": 3485,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 159989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 159989 over 58500"
+    ],
+    "redFlags": [
+     "price 159989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:08.337Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2025 Chevrolet Corvette Convertible For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:14.698Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YF3D34R5610340": {
+   "id": "1G1YF3D34R5610340",
+   "vin": "1G1YF3D34R5610340",
+   "vinValid": true,
+   "year": 2024,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "convertible",
+   "price": 129989,
+   "miles": 1835,
+   "extColorName": "ARTCIC WHITE",
+   "intColorName": "ADRENALINE RED ",
+   "extColor": "white",
+   "intColor": "red",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2024-Corvette-Convertible-94667.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:17.700Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/94667.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_1.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_2.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_3.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_4.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_5.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_6.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_7.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_8.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_9.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_10.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_11.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_12.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_13.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_14.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_15.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_16.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_17.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_18.jpeg",
+    "https://usedcorvettesforsale.com/files/small/94667_19.jpeg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:17.700Z",
+   "lastSeen": "2026-11-16T20:43:17.700Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:17.700Z",
+     "price": 129989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:17.700Z",
+     "miles": 1835,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 129989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 129989 over 58500"
+    ],
+    "redFlags": [
+     "price 129989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:08.338Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2024 Chevrolet Corvette Convertible For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:17.701Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YD3D37S5602258": {
+   "id": "1G1YD3D37S5602258",
+   "vin": "1G1YD3D37S5602258",
+   "vinValid": true,
+   "year": 2025,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "convertible",
+   "price": 109989,
+   "miles": 13250,
+   "extColorName": "RAPID BLUE",
+   "intColorName": "JET BLACK ",
+   "extColor": "blue",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2025-Corvette-Convertible-94666.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:20.700Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc04849.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04849.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04853.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04855.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04857.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04865.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04840.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04842.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04845.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04846.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04887.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04889.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04892.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04895.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04898.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04901.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04906.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04910.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04921.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04942.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04945.jpg"
+   ],
+   "description": "FREE NATIONWIDE ENCLOSED DELIVERY! ON SALE NOW! LAST YEAR RAPID BLUE! R3 MOTORCARS IS PROUD TO PRESENT THIS UNBELIEVABLE 2025 CHEVROLET CORVETTE Z06 1LZ CONVERTIBLE WITH ONLY 13K MILES! THE RAPID BLUE EXTERIOR AND BLACK LEATHER INTERIOR SHOW LIKE NEW. THIS C8 Z06 COMES WITH OPTIONS INCLUDING THE 1LZ PKG, CARBON FLASH PAINTED ROOF AND NACELLES ($1,295), BODY COLOR EXTERIOR ACCENTS ($995), GLOSS BLACK SPIDER DESIGN FORGED WHEELS ($995), EDGE RED CALIPERS ($695), RAPID BLUE PAINT ($500), BLACK EXHAUST TIPS ($395), Z06 BADGES IN RED ($275), CARBON FLASH MIRRORS ($195), DUAL MODE PERFORMANCE EXHAUST, HEADS UP DISPLAY, KEYLESS GO WITH PUSH BUTTON START, REMOTE START, BOSE SOUND, PWR WINDOWS AND LOCKS, OWNERS MANUAL, 8SP DUAL CLUTCH AUTOMATIC TRANSMISSION WITH PADDLE SHIFTERS, BOOKS, AND MORE! SUPER COMPETITVE FINANCING RATES AVAILABLE WITH APPROVED CREDIT. FACTORY WARRANTY UNTIL 60K MILES! EXTENDED WARRANTIES AVAILABLE TOO! PRICED RIGHT AND READY TO GO!! PLEASE CALL ME WITH ANY QUESTIONS. THANKS. NOW IS YOUR CHANCE TO OWN A BASICALLY BRAND NEW 2025 Z06 IN THE BEST COLOR THAT IS NOW DISCONTINUED FOR THOUSANDS LESS THAN NEW! THIS CAR IS ABSOLUTELY GORGEOUS! VIEW EVEN MORE PICS AND THE VEHICLE HISTORY REPORT AT R3MOTORCARS.COM RUSTY SMITH OWNER 239-304-9898 OFFICE 239-610-0007 CELL FREE NATIONWIDE ENCLOSED DELIVERY!!! BUY YOUR NEXT CORVETTE FROM A DEALER THAT KNOWS WHAT THEY ARE SELLING YOU! WE ARE A CORVETTE SPECIALIST WITH PERFECT 5 STAR REVIEWS! ALL OF OUR INVENTORY IS INSIDE OUR CLIMATE CONTROLLED SHOWROOM! FULL HI-DEF WALK AROUND VIDEO BELOW! https://youtu.be/bsJH83WtzDg?si=7wDvbF72XOO1rimS Please visit url below for more info / photos of this Vette:https://www.r3motorcars.com/inventory/2025-chevrolet-corvette-z06-1lz-convertible/1196426",
+   "optionClaims": {
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:20.700Z",
+   "lastSeen": "2026-11-16T20:43:20.700Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:20.700Z",
+     "price": 109989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:20.700Z",
+     "miles": 13250,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 109989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 109989 over 58500"
+    ],
+    "redFlags": [
+     "price 109989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:08.339Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2025 Chevrolet Corvette Convertible For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:20.700Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YR2D79V5900202": {
+   "id": "1G1YR2D79V5900202",
+   "vin": "1G1YR2D79V5900202",
+   "vinValid": true,
+   "year": 2027,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "ZR1",
+   "trim": null,
+   "body": "coupe",
+   "price": null,
+   "miles": 249,
+   "extColorName": "BLADE SILVER MET",
+   "intColorName": "HABANERO ",
+   "extColor": "silver",
+   "intColor": "brown",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2026-Corvette-Coupe-94665.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:23.715Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc06675.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06675.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06679.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06682.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06684.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06690.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06667.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06669.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06671_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06673_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06713.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06714.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06719.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06720.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06724.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06726.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06730.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06739.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06740.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06759.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06760.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:23.715Z",
+   "lastSeen": "2026-11-16T20:43:23.715Z",
+   "status": "active",
+   "priceHistory": [],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:23.715Z",
+     "miles": 249,
+     "source": "page"
+    }
+   ],
+   "failReasons": [],
+   "history": {
+    "at": "2026-11-16T20:44:08.339Z",
+    "checks": {
+     "vin": {
+      "value": "VIN 1G1YR2D79V5900202 check digit OK",
+      "truth": "verified",
+      "source": "check-digit math"
+     },
+     "decode": {
+      "value": "2027 CHEVROLET Corvette ZR1X 3LZ coupe, LT7, , built BOWLING GREEN, KENTUCKY",
+      "truth": "verified",
+      "source": "NHTSA vPIC"
+     },
+     "recalls": {
+      "value": "No NHTSA recalls listed for 2027 Corvette",
+      "truth": "verified",
+      "source": "NHTSA recalls API"
+     },
+     "report": {
+      "value": "No free CARFAX/AutoCheck link found",
+      "truth": "unknown",
+      "source": "listing"
+     },
+     "owners": {
+      "value": "Number of owners unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "accidents": {
+      "value": "Accident history unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "title": {
+      "value": "Title status unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "nicb": {
+      "value": "NICB VINCheck: tap the link (free, manual: theft & insurance total-loss records)",
+      "truth": "unknown",
+      "source": "manual"
+     },
+     "odometer": {
+      "value": "Only one mileage reading so far",
+      "truth": "claim",
+      "source": "bot history"
+     },
+     "warranty": {
+      "value": "bumper-to-bumper likely left (~2.9 yr / 35,751 mi); powertrain likely left (~4.9 yr / 59,751 mi)",
+      "truth": "unknown",
+      "source": "estimate from model year + miles (confirm with a dealer by VIN)"
+     }
+    },
+    "recalls": [],
+    "mismatches": [
+     "Listing says 2026, VIN says 2027"
+    ],
+    "serious": [
+     "VIN decodes to a different car than advertised: Listing says 2026, VIN says 2027"
+    ]
+   },
+   "eval": {
+    "ruleScore": 60,
+    "fvFarBelow": false,
+    "breakdown": {
+     "history": 14.1,
+     "price": 10,
+     "mechanical": 12.5,
+     "mileage": 12.4,
+     "options": 5.6,
+     "seller": 5
+    },
+    "confidence": "Low",
+    "unknowns": [
+     "title",
+     "accidents",
+     "history report",
+     "fair value",
+     "maintenance records",
+     "Z51"
+    ],
+    "scam": {
+     "level": "High",
+     "reasons": [
+      "VIN decodes to a different car"
+     ]
+    },
+    "redFlags": [
+     "VIN decodes to a different car than advertised: Listing says 2026, VIN says 2027"
+    ],
+    "yellowFlags": [
+     "Listing says 2026, VIN says 2027"
+    ],
+    "sellerType": null,
+    "score": 60,
+    "cls": "Reject",
+    "notes": [],
+    "aiAdjust": 0,
+    "aiReason": null,
+    "tier": "rules",
+    "aiPending": true,
+    "at": "2026-11-16T20:44:10.572Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2026 Chevrolet Corvette Coupe For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:23.715Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "vinDecode": {
+    "at": "2026-11-16T20:44:09.473Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2027,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "ZR1X 3LZ",
+    "series": "",
+    "body": "coupe",
+    "engine": "LT7",
+    "displacement": "5.5",
+    "transmission": "",
+    "plant": "BOWLING GREEN, KENTUCKY",
+    "transmissionOk": null
+   },
+   "evalHistory": []
+  },
+  "1G1YJ3D76V5800281": {
+   "id": "1G1YJ3D76V5800281",
+   "vin": "1G1YJ3D76V5800281",
+   "vinValid": true,
+   "year": 2027,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "ZR1",
+   "trim": null,
+   "body": "convertible",
+   "price": null,
+   "miles": 291,
+   "extColorName": "ROSWELL GREEN MET",
+   "intColorName": "HABANERO ",
+   "extColor": "green",
+   "intColor": "brown",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2026-Corvette-Convertible-94663.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:26.702Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc06967.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06967.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06974_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06976_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06977.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06984.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06959.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06961.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06963.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc06965.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07006.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07012_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07016.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07019.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07023.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07025.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07029.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07036.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07038.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07061.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc07063.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:26.702Z",
+   "lastSeen": "2026-11-16T20:43:26.702Z",
+   "status": "active",
+   "priceHistory": [],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:26.702Z",
+     "miles": 291,
+     "source": "page"
+    }
+   ],
+   "failReasons": [],
+   "history": {
+    "at": "2026-11-16T20:44:10.574Z",
+    "checks": {
+     "vin": {
+      "value": "VIN 1G1YJ3D76V5800281 check digit OK",
+      "truth": "verified",
+      "source": "check-digit math"
+     },
+     "decode": {
+      "value": "2027 CHEVROLET Corvette ZR1 3LZ convertible, LT7, , built BOWLING GREEN, KENTUCKY",
+      "truth": "verified",
+      "source": "NHTSA vPIC"
+     },
+     "recalls": {
+      "value": "No NHTSA recalls listed for 2027 Corvette",
+      "truth": "verified",
+      "source": "NHTSA recalls API"
+     },
+     "report": {
+      "value": "No free CARFAX/AutoCheck link found",
+      "truth": "unknown",
+      "source": "listing"
+     },
+     "owners": {
+      "value": "Number of owners unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "accidents": {
+      "value": "Accident history unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "title": {
+      "value": "Title status unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "nicb": {
+      "value": "NICB VINCheck: tap the link (free, manual: theft & insurance total-loss records)",
+      "truth": "unknown",
+      "source": "manual"
+     },
+     "odometer": {
+      "value": "Only one mileage reading so far",
+      "truth": "claim",
+      "source": "bot history"
+     },
+     "warranty": {
+      "value": "bumper-to-bumper likely left (~2.9 yr / 35,709 mi); powertrain likely left (~4.9 yr / 59,709 mi)",
+      "truth": "unknown",
+      "source": "estimate from model year + miles (confirm with a dealer by VIN)"
+     }
+    },
+    "recalls": [],
+    "mismatches": [
+     "Listing says 2026, VIN says 2027"
+    ],
+    "serious": [
+     "VIN decodes to a different car than advertised: Listing says 2026, VIN says 2027"
+    ]
+   },
+   "eval": {
+    "ruleScore": 55,
+    "fvFarBelow": false,
+    "breakdown": {
+     "history": 14.1,
+     "price": 10,
+     "mechanical": 12.5,
+     "mileage": 12.3,
+     "options": 0.6,
+     "seller": 5
+    },
+    "confidence": "Low",
+    "unknowns": [
+     "title",
+     "accidents",
+     "history report",
+     "fair value",
+     "maintenance records",
+     "Z51"
+    ],
+    "scam": {
+     "level": "High",
+     "reasons": [
+      "VIN decodes to a different car"
+     ]
+    },
+    "redFlags": [
+     "VIN decodes to a different car than advertised: Listing says 2026, VIN says 2027"
+    ],
+    "yellowFlags": [
+     "Listing says 2026, VIN says 2027",
+     "Convertible (you prefer coupe)"
+    ],
+    "sellerType": null,
+    "score": 55,
+    "cls": "Reject",
+    "notes": [],
+    "aiAdjust": 0,
+    "aiReason": null,
+    "tier": "rules",
+    "aiPending": false,
+    "at": "2026-11-16T20:44:11.727Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2026 Chevrolet Corvette Convertible For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:26.702Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "vinDecode": {
+    "at": "2026-11-16T20:44:11.726Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2027,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "ZR1 3LZ",
+    "series": "",
+    "body": "convertible",
+    "engine": "LT7",
+    "displacement": "5.5",
+    "transmission": "",
+    "plant": "BOWLING GREEN, KENTUCKY",
+    "transmissionOk": null
+   },
+   "evalHistory": []
+  },
+  "1G1YC2D44N5102150": {
+   "id": "1G1YC2D44N5102150",
+   "vin": "1G1YC2D44N5102150",
+   "vinValid": true,
+   "year": 2022,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Stingray",
+   "trim": "3LT",
+   "body": "coupe",
+   "price": 115000,
+   "miles": 1265,
+   "extColorName": "Gray",
+   "intColorName": "Black and Yellow ",
+   "extColor": "gray",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": "Ave Runnemede",
+   "state": "NJ",
+   "zip": "08078",
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2022-Corvette-Coupe-94633.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:29.721Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/94633_9.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_9.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_2.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_3.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_4.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_5.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_6.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_7.jpg",
+    "https://usedcorvettesforsale.com/files/small/94633_8.jpg"
+   ],
+   "description": "Introducing the 2022 Chevrolet Corvette IMSA GTLM Championship Edition, a true masterpiece of automotive engineering and design. This stunning vehicle boasts a sleek gray exterior that complements its racing heritage. Under the hood, you'll find a powerful 6.2 Liter V8 engine paired with a smooth automatic transmission, delivering an exhilarating driving experience that is both thrilling and refined. Step inside, and you'll be greeted by a luxurious black and yellow leather interior that exudes sophistication and style. The cabin is equipped with a range of",
+   "optionClaims": {},
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:29.721Z",
+   "lastSeen": "2026-11-16T20:43:29.721Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:29.721Z",
+     "price": 115000,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:29.721Z",
+     "miles": 1265,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 115000 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 115000 over 58500"
+    ],
+    "redFlags": [
+     "price 115000 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:11.728Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2022 Chevrolet Corvette Coupe For Sale in Illinois",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:29.721Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "PerfExhaust": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "La2fc7fa046": {
+   "id": "La2fc7fa046",
+   "vin": null,
+   "vinValid": null,
+   "year": 2023,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": null,
+   "trim": "3LT",
+   "body": "coupe",
+   "price": 77500,
+   "miles": 1451,
+   "extColorName": "Caffeine Metallic",
+   "intColorName": " Natural Dipped ",
+   "extColor": "bronze",
+   "intColor": "natural",
+   "sellerName": "Private seller",
+   "sellerType": "private",
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2023-Corvette-Coupe-94625.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:32.733Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/94625.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_2.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_3.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_4.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_5.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_6.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_7.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_8.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_9.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_10.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_11.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_12.jpg",
+    "https://usedcorvettesforsale.com/files/small/94625_13.jpg"
+   ],
+   "description": "LOCATED IN FLORIDA This 2023 Corvette Coupe was purchased new by the current owner. The odometer shows only 1,451 miles. It is still new! If you are looking for a C8 Corvette loaded with options this one has them. - 3LT option package - Front lift adjustable height memory - Z51 performance suspension - Magnetic selective ride - Performance exhaust - High performance tires - Heavy duty cooling system - Performance traction management - Chrome plated aluminum Trident wheels - Rear spoiler painted body color - Plus, numerous other “must have”",
+   "optionClaims": {
+    "Z51": true,
+    "MagRide": true,
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:32.733Z",
+   "lastSeen": "2026-11-16T20:43:32.733Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:32.733Z",
+     "price": 77500,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:32.733Z",
+     "miles": 1451,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 77500 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 77500 over 58500"
+    ],
+    "redFlags": [
+     "price 77500 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:11.729Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2023 Chevrolet Corvette Coupe For Sale in ==US==",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:32.733Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "MagRide": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YC3D40N5117203": {
+   "id": "1G1YC3D40N5117203",
+   "vin": "1G1YC3D40N5117203",
+   "vinValid": true,
+   "year": 2022,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Stingray",
+   "trim": "3LT",
+   "body": "convertible",
+   "price": null,
+   "miles": 11542,
+   "extColorName": "Red Mist Metallic",
+   "intColorName": "Natural  ",
+   "extColor": "dark red",
+   "intColor": "natural",
+   "sellerName": null,
+   "sellerType": null,
+   "city": "S. Edgewater Park",
+   "state": "NJ",
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2022-Corvette-Convertible-94623.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:35.735Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/639274459325687680.jpg",
+    "https://usedcorvettesforsale.com/files/small/639274459325687680.jpg",
+    "https://usedcorvettesforsale.com/files/small/639274459149439343.jpg",
+    "https://usedcorvettesforsale.com/files/small/639274459153356728.jpg",
+    "https://usedcorvettesforsale.com/files/small/639274459214509552.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "Z51": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:35.735Z",
+   "lastSeen": "2026-11-16T20:43:35.735Z",
+   "status": "active",
+   "priceHistory": [],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:35.735Z",
+     "miles": 11542,
+     "source": "page"
+    }
+   ],
+   "failReasons": [],
+   "history": {
+    "at": "2026-11-16T20:44:11.730Z",
+    "checks": {
+     "vin": {
+      "value": "VIN 1G1YC3D40N5117203 check digit OK",
+      "truth": "verified",
+      "source": "check-digit math"
+     },
+     "decode": {
+      "value": "2022 CHEVROLET Corvette Premium 3LT convertible, LT2, Automatic 8, built BOWLING GREEN, KENTUCKY",
+      "truth": "verified",
+      "source": "NHTSA vPIC"
+     },
+     "recalls": {
+      "value": "1 recall(s) for 2022 Corvettes. Confirm completion by VIN with a Chevy dealer",
+      "truth": "verified",
+      "source": "NHTSA recalls API"
+     },
+     "report": {
+      "value": "No free CARFAX/AutoCheck link found",
+      "truth": "unknown",
+      "source": "listing"
+     },
+     "owners": {
+      "value": "Number of owners unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "accidents": {
+      "value": "Accident history unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "title": {
+      "value": "Title status unknown",
+      "truth": "unknown",
+      "source": ""
+     },
+     "nicb": {
+      "value": "NICB VINCheck: tap the link (free, manual: theft & insurance total-loss records)",
+      "truth": "unknown",
+      "source": "manual"
+     },
+     "odometer": {
+      "value": "Only one mileage reading so far",
+      "truth": "claim",
+      "source": "bot history"
+     },
+     "warranty": {
+      "value": "bumper-to-bumper (3yr/36k) likely expired; powertrain (5yr/60k) likely expired",
+      "truth": "unknown",
+      "source": "estimate from model year + miles (confirm with a dealer by VIN)"
+     }
+    },
+    "recalls": [
+     {
+      "id": "22V091000",
+      "date": "17/02/2022",
+      "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+      "summary": "The rear half-shaft assemblies may be missing one or more ball bearings, which can result in a loss of drive power."
+     }
+    ],
+    "mismatches": [],
+    "serious": []
+   },
+   "eval": {
+    "ruleScore": 56,
+    "fvFarBelow": false,
+    "breakdown": {
+     "history": 14.1,
+     "price": 10,
+     "mechanical": 9.3,
+     "mileage": 11.2,
+     "options": 3.7,
+     "seller": 7.5
+    },
+    "confidence": "Medium",
+    "unknowns": [
+     "title",
+     "accidents",
+     "history report",
+     "fair value",
+     "maintenance records"
+    ],
+    "scam": {
+     "level": "Medium",
+     "reasons": [
+      "Very few photos"
+     ]
+    },
+    "redFlags": [],
+    "yellowFlags": [
+     "Convertible (you prefer coupe)"
+    ],
+    "sellerType": null,
+    "score": 56,
+    "cls": "Reject",
+    "notes": [],
+    "aiAdjust": 0,
+    "aiReason": null,
+    "tier": "rules",
+    "aiPending": false,
+    "at": "2026-11-16T20:44:14.324Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2022 Chevrolet Corvette Convertible For Sale in New Jersey",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:35.736Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "vinDecode": {
+    "at": "2026-11-16T20:44:13.101Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2022,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "Premium 3LT",
+    "series": "",
+    "body": "convertible",
+    "engine": "LT2",
+    "displacement": "6.2",
+    "transmission": "Automatic 8",
+    "plant": "BOWLING GREEN, KENTUCKY",
+    "transmissionOk": true
+   },
+   "evalHistory": []
+  },
+  "1G1YF3D39R5606302": {
+   "id": "1G1YF3D39R5606302",
+   "vin": "1G1YF3D39R5606302",
+   "vinValid": true,
+   "year": 2024,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "convertible",
+   "price": 133990,
+   "miles": 2384,
+   "extColorName": "Artic White",
+   "intColorName": "Jet Black ",
+   "extColor": "white",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": "S. Edgewater Park",
+   "state": "NJ",
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2024-Corvette-Convertible-94584.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:38.722Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/639259481155241947.jpg",
+    "https://usedcorvettesforsale.com/files/small/639259481155241947.jpg",
+    "https://usedcorvettesforsale.com/files/small/639259481004270209.jpg",
+    "https://usedcorvettesforsale.com/files/small/639259481011937729.jpg",
+    "https://usedcorvettesforsale.com/files/small/639259481071456488.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:38.722Z",
+   "lastSeen": "2026-11-16T20:43:38.722Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:38.722Z",
+     "price": 133990,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:38.722Z",
+     "miles": 2384,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 133990 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 133990 over 58500"
+    ],
+    "redFlags": [
+     "price 133990 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.325Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2024 Chevrolet Corvette Convertible For Sale in New Jersey",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:38.722Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "La9e5a685ea": {
+   "id": "La9e5a685ea",
+   "vin": null,
+   "vinValid": null,
+   "year": 2025,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "convertible",
+   "price": 133999,
+   "miles": 4080,
+   "extColorName": "Red Mist Metallic",
+   "intColorName": "Jet Black  ",
+   "extColor": "dark red",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2025-Corvette-Convertible-94542.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:41.727Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/94542.jpg",
+    "https://usedcorvettesforsale.com/files/small/94542.jpg",
+    "https://usedcorvettesforsale.com/files/small/94542_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/94542_2.jpg"
+   ],
+   "description": "BUYAVETTE CERTIFIED!! SEE THE FREE CARFAX AND MORE PHOTOS OF THIS CORVETTE, PLUS MANY MORE AT WWW.BUYAVETTE.NET! OUR CERTIFIED VEHICLES ARE PROFESSIONALLY INSPECTED, CAREFULLY SERVICED, AND BACKED BY A LIMITED WARRANTY AT NO EXTRA COST. Red Mist Metallic exterior, Jet Black interior. 670hp LT6 engine, 8 speed automatic paddleshift transmission, posi rear-end. Factory",
+   "optionClaims": {
+    "FrontLift": true,
+    "Seats": "GT2"
+   },
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:41.727Z",
+   "lastSeen": "2026-11-16T20:43:41.727Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:41.727Z",
+     "price": 133999,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:41.727Z",
+     "miles": 4080,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 133999 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 133999 over 58500"
+    ],
+    "redFlags": [
+     "price 133999 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.325Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2025 Chevrolet Corvette Convertible For Sale in Georgia",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:41.727Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "Seats": {
+     "value": "GT2",
+     "truth": "claim",
+     "source": "listing text"
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YC3D4XP5117941": {
+   "id": "1G1YC3D4XP5117941",
+   "vin": "1G1YC3D4XP5117941",
+   "vinValid": true,
+   "year": 2023,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Stingray",
+   "trim": "3LT",
+   "body": "convertible",
+   "price": 84900,
+   "miles": 750,
+   "extColorName": "Silver Flare ",
+   "intColorName": "Black  ",
+   "extColor": "silver",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2023-Corvette-Convertible-94339.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:44.749Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/23r_17941.jpg",
+    "https://usedcorvettesforsale.com/files/small/23r_17941.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1804.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1805.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1806.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1808.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1809.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1811.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1812.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1813.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1814.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1818.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1826.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1827.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1828.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1832.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1833.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1834.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1847.jpg",
+    "https://usedcorvettesforsale.com/files/small/000_1860.jpg",
+    "https://usedcorvettesforsale.com/files/small/23silver_conv_ws.jpg"
+   ],
+   "description": "***This Fabulous C8 Mid-Engine Corvette Hard-Top Convertible is a dream come true for any avid Corvette enthusiast. A true world-class sportscar, if not outright supercar, this one has an extensive list of options which makes it unique and extremely difficult to find, especially with JUST UNDER 750 MILES since new! Exhilarating performance from it's 6.2 Liter V8 with 495 naturally aspirated horsepower equated to the fastest production Corvette Stingray up to that time---With a 0-60 mile per hour time under 3 seconds---And top speed performance exceeding 190 miles per hour!*** ***Chief amongst the additional equipment is the much desired Z51 Performance Package with low rear spoiler and front splitter, as well as the ultimate 3LT Interior Package, Front Lift, Magnetic Selective Ride Control, and Custom Leather Wrapped Interior Package. The sleek black leather interior is complemented with bright red brake calipers, red seat belts, and red stitching on the GT2 bucket seats, not to mention the 20 Spoke Gray Forged Aluminum Wheels with Red Stripe. It even comes with a premium indoor and outdoor car covers!*** ***Factory Window Sticker Denoting Original MSRP Of $102,470.00 With Nearly $18,000.00 In Factory Options.*** ***One Owner*** ***Just Under 750 Miles***",
+   "optionClaims": {
+    "Z51": true,
+    "MagRide": true,
+    "FrontLift": true,
+    "Seats": "GT2"
+   },
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:44.749Z",
+   "lastSeen": "2026-11-16T20:43:44.749Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:44.749Z",
+     "price": 84900,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:44.749Z",
+     "miles": 750,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 84900 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 84900 over 58500"
+    ],
+    "redFlags": [
+     "price 84900 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.326Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2023 Chevrolet Corvette Convertible For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:44.749Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "MagRide": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "included with Z51"
+    },
+    "Seats": {
+     "value": "GT2",
+     "truth": "claim",
+     "source": "listing text"
+    }
+   },
+   "evalHistory": []
+  },
+  "L15beed0508": {
+   "id": "L15beed0508",
+   "vin": null,
+   "vinValid": null,
+   "year": 2022,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Stingray",
+   "trim": "2LT",
+   "body": "convertible",
+   "price": 72999,
+   "miles": 8312,
+   "extColorName": "Torch Red",
+   "intColorName": "Adrenaline Red ",
+   "extColor": "red",
+   "intColor": "red",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2022-Corvette-Convertible-94070.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:47.748Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/1_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/1_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/2_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/3_57.jpg",
+    "https://usedcorvettesforsale.com/files/small/4_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/5_45.jpg",
+    "https://usedcorvettesforsale.com/files/small/6_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/7_43.jpg",
+    "https://usedcorvettesforsale.com/files/small/8_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/9_41.jpg",
+    "https://usedcorvettesforsale.com/files/small/10_44.jpg",
+    "https://usedcorvettesforsale.com/files/small/11_8.jpg",
+    "https://usedcorvettesforsale.com/files/small/12_20.jpg"
+   ],
+   "description": "022 Chevrolet Corvette Stingray Convertible 2LT 1 OWNER! 8,000 MILES! Front Lift Adjustable Height Magnetic Selective Ride Control Adrenaline Red/ Black 2-Tone GT2 Seats, Heated & Ventilated Black Chrome 5 Spoke Open Style 19\" Front/ 20\" Rear Wheels Carbon Flash Painted Nacelles and Roof (Convertible Top) Performance Exhaust Performance Data and Video Recorder Carbon Flash Full Length Dual Racing Stripe Package Body Color Exterior Accents Bright Red Painted Brake Calipers Carbon Flash Metallic Painted Outside Mirrors Low Rear Spoiler and Front Splitter 495HP 6.2L V8 DI Engine 8-Speed Dual Clutch Transmission Torch Red Exterior Adrenaline Red (w/ Black Accent) Interior Stability & Traction Control HD Front/Rear Vision Cameras (Front Camera is Curb View) Rear Park Assist Enhanced Theft Deterrent System Rear Cross Traffic Alert Side Blind Zone Alert Bose Performance Series 14 Speaker Audio System Keyless Open and Start Remote Vehicle Start Wireless Apple CarPlay & Wireless Android Auto Air Conditioning, Dual Zone Climate Control",
+   "optionClaims": {
+    "MagRide": true,
+    "FrontLift": true,
+    "PerfExhaust": true,
+    "Seats": "GT2"
+   },
+   "ownersClaim": 1,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:47.748Z",
+   "lastSeen": "2026-11-16T20:43:47.748Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:47.748Z",
+     "price": 72999,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:47.748Z",
+     "miles": 8312,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 72999 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 72999 over 58500"
+    ],
+    "redFlags": [
+     "price 72999 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.327Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2022 Chevrolet Corvette Convertible For Sale in New York",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:47.748Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": "GT2",
+     "truth": "claim",
+     "source": "listing text"
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YF2D35S5601405": {
+   "id": "1G1YF2D35S5601405",
+   "vin": "1G1YF2D35S5601405",
+   "vinValid": true,
+   "year": 2025,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "coupe",
+   "price": 154989,
+   "miles": 1870,
+   "extColorName": "COMPETITION YELLOW",
+   "intColorName": "JET BLACK ",
+   "extColor": "yellow",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2025-Corvette-Coupe-93299.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:50.787Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc04200.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04200.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04201.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04202.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04204.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04206.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04212.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04214.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04217_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04222.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04262_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04264.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04268.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04271.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04277.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04278.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04281.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04283.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04285.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04321.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc04324.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:50.787Z",
+   "lastSeen": "2026-11-16T20:43:50.787Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:50.787Z",
+     "price": 154989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:50.787Z",
+     "miles": 1870,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 154989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 154989 over 58500"
+    ],
+    "redFlags": [
+     "price 154989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.327Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2025 Chevrolet Corvette Coupe For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:50.788Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YF3D3XR5602758": {
+   "id": "1G1YF3D3XR5602758",
+   "vin": "1G1YF3D3XR5602758",
+   "vinValid": true,
+   "year": 2024,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "convertible",
+   "price": 151989,
+   "miles": 1618,
+   "extColorName": "RIPTIDE BLUE M",
+   "intColorName": "SKY COOL GRAY ",
+   "extColor": "blue",
+   "intColor": "gray",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2024-Corvette-Convertible-93297.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:53.776Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc03888.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03888.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03889.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03892.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03894.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03895.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03902.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03907.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03911.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03934.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03936.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03939.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03942.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03946.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03949.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03952.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03953.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03955.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03965.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03989.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03994.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:53.776Z",
+   "lastSeen": "2026-11-16T20:43:53.776Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:53.776Z",
+     "price": 151989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:53.776Z",
+     "miles": 1618,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 151989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 151989 over 58500"
+    ],
+    "redFlags": [
+     "price 151989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.328Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2024 Chevrolet Corvette Convertible For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:53.776Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YF2D38S5600698": {
+   "id": "1G1YF2D38S5600698",
+   "vin": "1G1YF2D38S5600698",
+   "vinValid": true,
+   "year": 2025,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "coupe",
+   "price": 149989,
+   "miles": 379,
+   "extColorName": "RAPID BLUE",
+   "intColorName": "JET BLACK ",
+   "extColor": "blue",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2025-Corvette-Coupe-93295.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:56.774Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc02913.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02913.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02914.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02915.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02916.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02918.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02926.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02929.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02931.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02937.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02960.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02962.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02967.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02968.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02972.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02977.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02979.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02980.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02990.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03012.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc03014.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:56.774Z",
+   "lastSeen": "2026-11-16T20:43:56.774Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:56.774Z",
+     "price": 149989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:56.774Z",
+     "miles": 379,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 149989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 149989 over 58500"
+    ],
+    "redFlags": [
+     "price 149989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.328Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2025 Chevrolet Corvette Coupe For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:56.774Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YF3D32S5602064": {
+   "id": "1G1YF3D32S5602064",
+   "vin": "1G1YF3D32S5602064",
+   "vinValid": true,
+   "year": 2025,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "convertible",
+   "price": 156989,
+   "miles": 704,
+   "extColorName": "RED MIST METTALIC",
+   "intColorName": "JET BLACK ",
+   "extColor": "dark red",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2025-Corvette-Convertible-93294.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:43:59.784Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc02602.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02602.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02603.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02605.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02608.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02609.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02615.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02617.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02620.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02627.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02649_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02651.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02655.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02660.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02663.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02667_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02669.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02671.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02686.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02715_1.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc02718_1.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:43:59.784Z",
+   "lastSeen": "2026-11-16T20:43:59.784Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:43:59.784Z",
+     "price": 156989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:43:59.784Z",
+     "miles": 704,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 156989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 156989 over 58500"
+    ],
+    "redFlags": [
+     "price 156989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.329Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2025 Chevrolet Corvette Convertible For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:43:59.784Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YB2D41R5111476": {
+   "id": "1G1YB2D41R5111476",
+   "vin": "1G1YB2D41R5111476",
+   "vinValid": true,
+   "year": 2024,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Stingray",
+   "trim": "2LT",
+   "body": "coupe",
+   "price": 89989,
+   "miles": 3079,
+   "extColorName": "RED MIST METALLIC",
+   "intColorName": "ADRENALINE RED ",
+   "extColor": "dark red",
+   "intColor": "red",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2024-Corvette-Coupe-93290.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:44:02.786Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/93290.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_1.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_2.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_3.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_4.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_5.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_6.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_7.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_8.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_9.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_10.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_11.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_12.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_13.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_14.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_15.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_16.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_17.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_18.jpeg",
+    "https://usedcorvettesforsale.com/files/small/93290_19.jpeg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "Z51": true,
+    "PerfExhaust": true,
+    "Seats": "GT2"
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:44:02.786Z",
+   "lastSeen": "2026-11-16T20:44:02.786Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:44:02.786Z",
+     "price": 89989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:44:02.786Z",
+     "miles": 3079,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 89989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 89989 over 58500"
+    ],
+    "redFlags": [
+     "price 89989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.329Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2024 Chevrolet Corvette Coupe For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:44:02.787Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": "GT2",
+     "truth": "claim",
+     "source": "listing text"
+    }
+   },
+   "evalHistory": []
+  },
+  "1G1YF2D38S5601981": {
+   "id": "1G1YF2D38S5601981",
+   "vin": "1G1YF2D38S5601981",
+   "vinValid": true,
+   "year": 2025,
+   "make": "Chevrolet",
+   "model": "Corvette",
+   "variant": "Z06",
+   "trim": null,
+   "body": "coupe",
+   "price": 172989,
+   "miles": 1065,
+   "extColorName": "HYSTERIA PURPLE MET",
+   "intColorName": "JET BLACK ",
+   "extColor": "purple",
+   "intColor": "black",
+   "sellerName": null,
+   "sellerType": null,
+   "city": null,
+   "state": null,
+   "zip": null,
+   "links": [
+    {
+     "url": "https://usedcorvettesforsale.com/2025-Corvette-Coupe-93194.html",
+     "site": "usedcorvettesforsale",
+     "firstSeen": "2026-11-16T20:44:05.794Z"
+    }
+   ],
+   "photos": [
+    "https://usedcorvettesforsale.com/files/dsc08905.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08905.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08906.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08912.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08916.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08918.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08924.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08926.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08927.jpg",
+    "https://usedcorvettesforsale.com/files/small/93194.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08961.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08964.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08967.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08969.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08976.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08978.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08980.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08983.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc08996.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc09019.jpg",
+    "https://usedcorvettesforsale.com/files/small/dsc09021.jpg"
+   ],
+   "description": null,
+   "optionClaims": {
+    "FrontLift": true,
+    "PerfExhaust": true
+   },
+   "ownersClaim": null,
+   "historyReportUrl": null,
+   "marketSignals": {},
+   "cpo": false,
+   "firstSeen": "2026-11-16T20:44:05.794Z",
+   "lastSeen": "2026-11-16T20:44:05.794Z",
+   "status": "active",
+   "priceHistory": [
+    {
+     "at": "2026-11-16T20:44:05.794Z",
+     "price": 172989,
+     "site": "usedcorvettesforsale"
+    }
+   ],
+   "mileageHistory": [
+    {
+     "at": "2026-11-16T20:44:05.794Z",
+     "miles": 1065,
+     "source": "page"
+    }
+   ],
+   "failReasons": [
+    "price 172989 over 58500"
+   ],
+   "history": null,
+   "eval": {
+    "ruleScore": 0,
+    "score": 0,
+    "cls": "Reject",
+    "confidence": "High",
+    "notes": [
+     "price 172989 over 58500"
+    ],
+    "redFlags": [
+     "price 172989 over 58500"
+    ],
+    "yellowFlags": [],
+    "unknowns": [],
+    "scam": {
+     "level": "Low",
+     "reasons": []
+    },
+    "tier": "rules",
+    "filtered": true,
+    "at": "2026-11-16T20:44:14.330Z"
+   },
+   "dataLevel": "page",
+   "sources": [
+    "usedcorvettesforsale"
+   ],
+   "flags": [],
+   "title": "2025 Chevrolet Corvette Coupe For Sale in Florida",
+   "recheck": true,
+   "lastChecked": "2026-11-16T20:44:05.794Z",
+   "optionsResolved": {
+    "Z51": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "MagRide": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    },
+    "FrontLift": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "PerfExhaust": {
+     "value": true,
+     "truth": "claim",
+     "source": "listing text"
+    },
+    "Seats": {
+     "value": null,
+     "truth": "unknown",
+     "source": ""
+    }
+   },
+   "evalHistory": []
+  }
+ },
+ "auctions": [],
+ "alertsSent": [],
+ "actions": [],
+ "sources": {
+  "alert-inbox": {
+   "status": "NOT SET UP",
+   "failCount": 0
+  },
+  "usedcorvettesforsale": {
+   "failCount": 0,
+   "status": "OK",
+   "lastSuccess": "2026-11-16T20:44:05.794Z"
+  }
+ },
+ "usage": {
+  "2026-11-16": {
+   "claude": 0,
+   "gemini": 0,
+   "emails": 0,
+   "pages": 22,
+   "questions": 0,
+   "telegramSent": 0,
+   "nhtsa": 7
+  }
+ },
+ "telegram": {
+  "offset": 0,
+  "awaiting": null,
+  "lastChatName": null
+ },
+ "queue": {
+  "fullCheck": [],
+  "deepDive": [],
+  "draft": [],
+  "checklist": [],
+  "links": [],
+  "questions": [],
+  "sweepRequested": false
+ },
+ "cache": {
+  "vin": {
+   "1G1YB2D42M5105131": {
+    "at": "2026-11-16T20:44:07.058Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2021,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "Preferred 2LT",
+    "series": "",
+    "body": "coupe",
+    "engine": "LT2 - ENGINE",
+    "displacement": "6.2",
+    "transmission": "Automatic 8",
+    "plant": "BOWLING GREEN, KENTUCKY"
+   },
+   "1G1YR2D79V5900202": {
+    "at": "2026-11-16T20:44:09.473Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2027,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "ZR1X 3LZ",
+    "series": "",
+    "body": "coupe",
+    "engine": "LT7",
+    "displacement": "5.5",
+    "transmission": "",
+    "plant": "BOWLING GREEN, KENTUCKY"
+   },
+   "1G1YJ3D76V5800281": {
+    "at": "2026-11-16T20:44:11.726Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2027,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "ZR1 3LZ",
+    "series": "",
+    "body": "convertible",
+    "engine": "LT7",
+    "displacement": "5.5",
+    "transmission": "",
+    "plant": "BOWLING GREEN, KENTUCKY"
+   },
+   "1G1YC3D40N5117203": {
+    "at": "2026-11-16T20:44:13.101Z",
+    "errorCode": "0",
+    "errorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+    "year": 2022,
+    "make": "CHEVROLET",
+    "model": "Corvette",
+    "trim": "Premium 3LT",
+    "series": "",
+    "body": "convertible",
+    "engine": "LT2",
+    "displacement": "6.2",
+    "transmission": "Automatic 8",
+    "plant": "BOWLING GREEN, KENTUCKY"
+   }
+  },
+  "recalls": {
+   "2021": {
+    "at": "2026-11-16T20:44:08.335Z",
+    "items": [
+     {
+      "id": "21V421000",
+      "date": "10/06/2021",
+      "component": "AIR BAGS:SRS MALFUNCTION WARNING LAMP/LIGHT",
+      "summary": "The communications gateway module incorrectly processes a loss of communication with the sensing diagnostic module (SDM), causing the air bag malfunction indica"
+     },
+     {
+      "id": "22V091000",
+      "date": "17/02/2022",
+      "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+      "summary": "The rear half-shaft assemblies may be missing one or more ball bearings, which can result in a loss of drive power."
+     }
+    ]
+   },
+   "2022": {
+    "at": "2026-11-16T20:44:14.323Z",
+    "items": [
+     {
+      "id": "22V091000",
+      "date": "17/02/2022",
+      "component": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+      "summary": "The rear half-shaft assemblies may be missing one or more ball bearings, which can result in a loss of drive power."
+     }
+    ]
+   },
+   "2027": {
+    "at": "2026-11-16T20:44:10.565Z",
+    "items": []
+   }
+  }
+ },
+ "notices": {},
+ "meta": {
+  "created": "2026-11-16T20:43:02.457Z",
+  "lastRun": {
+   "sweep": "2026-11-16T20:44:14.331Z",
+   "quick": "2026-11-16T20:44:14.331Z"
+  },
+  "runLog": [
+   {
+    "mode": "sweep",
+    "start": "2026-11-16T20:43:02.470Z",
+    "emails": 0,
+    "newListings": 20,
+    "alerts": 0,
+    "evaluated": 20,
+    "ai": 0,
+    "end": "2026-11-16T20:44:14.331Z",
+    "errors": 0,
+    "claudeToday": 0,
+    "errorSamples": []
+   }
+  ]
+ }
+}

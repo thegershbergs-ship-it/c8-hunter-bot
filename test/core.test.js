@@ -31,6 +31,8 @@ test('quickDecode C8 patterns', () => {
   assert.deepEqual([d.year, d.trim, d.body, d.variant], [2024, '3LT', 'coupe', 'Stingray']);
   assert.equal(quickDecode('1G1YD2D31P5600001').variant, 'Z06');
   assert.equal(quickDecode('1G1YB3D40M5100001').body, 'convertible');
+  assert.equal(quickDecode('1G1Y62D45L5111573').trim, '1LT'); assert.equal(quickDecode('1G1Y82D47L5118051').trim, '3LT');
+  assert.equal(isValidVin('1G1Y62D45L5111573'), true); assert.equal(isValidVin('1G1YB2D49M5114862'), true); assert.equal(isValidVin('1G1YC3D4XN5115006'), true);
 });
 test('findVins prefers valid VINs', () => {
   assert.equal(findVins('VIN: 1G1YC2D44R5111928 or 1G1YC2D43R5111928')[0], '1G1YC2D43R5111928');
@@ -57,11 +59,11 @@ test('negation-aware red flags', () => {
   assert.equal(textRedFlags('Not a lemon buyback, never salvage').length, 0);
 });
 
-test('distance: Wellesley MA to Manhattan ~ 215 mi est. driving', () => {
-  assert.ok(zipToLatLon('02481'));
-  const d = drivingMiles('02481', '10001', 1.2);
-  assert.ok(d > 180 && d < 250, String(d));
-  assert.equal(drivingMiles('02481', '99999'), null);
+test('distance: Philadelphia to Manhattan ~ 100 mi est. driving', () => {
+  assert.ok(zipToLatLon('19103'));
+  const d = drivingMiles('19103', '10001', 1.2);
+  assert.ok(d > 85 && d < 115, String(d));
+  assert.equal(drivingMiles('19103', '99999'), null);
 });
 test('monthly payment', () => {
   // $54,000 - $10,000 down at 7.5% for 72 months ≈ $760.75

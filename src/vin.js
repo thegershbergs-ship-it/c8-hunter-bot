@@ -34,7 +34,8 @@ export function quickDecode(vin) {
   if (!out.isCorvette) return out;
   out.body = vin[5] === '2' ? 'coupe' : vin[5] === '3' ? 'convertible' : null;
   const p5 = vin[4], p8 = vin[7];
-  if (p8 === '4' && 'ABC'.includes(p5)) { out.variant = 'Stingray'; out.trim = { A: '1LT', B: '2LT', C: '3LT' }[p5]; }
+  // 2020 used 6/7/8 for 1LT/2LT/3LT; 2021+ use A/B/C (verified with NHTSA vPIC 2026-11-16)
+  if (p8 === '4' && 'ABC678'.includes(p5)) { out.variant = 'Stingray'; out.trim = { A: '1LT', B: '2LT', C: '3LT', 6: '1LT', 7: '2LT', 8: '3LT' }[p5]; }
   else if (p8 === '3') out.variant = 'Z06';
   else out.variant = 'other';
   return out;
