@@ -64,7 +64,8 @@ const isListing = (url) => Object.values(SITE_PARSERS).some((p) => p.listing.tes
 export async function parseAlertEmail(mail, { resolve = resolveRedirect } = {}) {
   const from = `${mail.from?.text || ''} ${mail.subject || ''}`;
   const site = Object.entries(SITE_PARSERS).find(([, p]) => p.from.test(from))?.[0] || 'unknown';
-  const html = mail.html || (mail.textAsHtml ?? '');
+  // add spaces at line breaks / cell ends so text from adjacent cells doesn't run together ("$54,99518,452 mi")
+  const html = (mail.html || (mail.textAsHtml ?? '')).replace(/<br\s*\/?>/gi, ' ').replace(/<\/(td|th|div|p|tr|li|span|h[1-6]|a)>/gi, ' </$1>');
   const $ = cheerio.load(html || `<pre>${mail.text || ''}</pre>`);
   const byUrl = new Map();
   const anchors = $('a[href]').toArray();

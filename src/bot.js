@@ -22,11 +22,14 @@ export async function processUpdates(db, ctx) {
     const chat = String(u.message?.chat?.id ?? u.callback_query?.message?.chat?.id ?? '');
     const fromChat = u.message?.chat || u.callback_query?.message?.chat;
     if (!owner) {
-      // first private chat that sends /start binds as owner (setup step 2); recorded encrypted, never in plain text
+      // First private chat that sends /start binds as owner (setup step 2), stored encrypted.
+      // Binding happens ONCE EVER. If the encrypted link is later lost (e.g. bot token rotated), the bot
+      // fails closed: it ignores everyone until you set the TELEGRAM_CHAT_ID secret (see TROUBLESHOOTING).
+      if (db.d.meta.ownerLinkedOnce) { log('owner link missing; ignoring updates until TELEGRAM_CHAT_ID secret is set'); continue; }
       if (u.message?.chat?.type === 'private' && /^\/start/.test(u.message.text || '')) {
         setPrivateRaw('chat_id', chat); owner = chat; ctx.priv.chat_id = chat;
+        db.d.meta.ownerLinkedOnce = new Date().toISOString();
         await send(chat, `✅ Linked to you, ${esc(fromChat.first_name || '')}. I'll only ever talk to this chat.\n\n${HELP}`, { db });
-        db.noticeChanged('linked', chat);
         continue;
       }
       continue;

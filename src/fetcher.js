@@ -1,7 +1,7 @@
 // Channel 2: polite, robots.txt-respecting fetch of ONE listing page at a time.
 // Policy per site comes from settings.yaml (never | on_request | auto).
 import { siteOf } from './listing.js';
-import { sleep, fetchRetry } from './util.js';
+import { sleep, fetchRetry, isPublicHttpUrl } from './util.js';
 
 const robotsCache = new Map();
 const lastHit = new Map();
@@ -45,6 +45,7 @@ async function robotsFor(origin, ua) {
  * Returns {ok, html, status, reason}.
  */
 export async function politeFetch(url, s, db, { mode = 'auto' } = {}) {
+  if (!isPublicHttpUrl(url)) return { ok: false, reason: 'not a public web address' };
   const site = siteOf(url);
   const policy = s.sites[site]?.fetch || s.sites.dealer.fetch;
   if (policy === 'never') return { ok: false, reason: `${site} does not allow bots (terms/robots), so it is never fetched` };

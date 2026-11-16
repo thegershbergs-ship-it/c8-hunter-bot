@@ -177,7 +177,8 @@ export async function fullCheckUrl(db, url, ctx, { existing } = {}) {
   }
   const { listing: l, changes } = upsertObservation(db, fields, { url, source: 'page', dataLevel: 'page' });
   l.lastChecked = nowIso();
-  if (l.historyReportUrl && !l.reportText) {
+  // Only fetch history reports from known report providers (the URL comes from page content).
+  if (l.historyReportUrl && !l.reportText && /^https:\/\/([a-z0-9-]+\.)*(carfax\.com|autocheck\.com)\//i.test(l.historyReportUrl)) {
     const hr = await politeFetch(l.historyReportUrl, ctx.s, db, { mode: 'request' });
     if (hr.ok) { const p = parsePage(hr.html, l.historyReportUrl); l.reportText = p.pageText?.slice(0, 6000); }
   }

@@ -4,7 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { ROOT } from './config.js';
-import { fetchRetry, warn, log, redact } from './util.js';
+import { fetchRetry, warn, log, redact, isPublicHttpUrl } from './util.js';
 
 const PROMPT = () => fs.readFileSync(path.join(ROOT, 'prompts', 'evaluate.md'), 'utf8');
 export const claudeConfigured = () => !!process.env.CLAUDE_CODE_OAUTH_TOKEN && process.env.DISABLE_CLAUDE !== '1';
@@ -39,6 +39,7 @@ export async function downloadPhotos(urls, max, buffers = []) {
   if (urls.length <= max) pick.push(...urls); else { const step = urls.length / max; for (let i = 0; i < max; i++) pick.push(urls[Math.floor(i * step)]); }
   for (const [i, u] of pick.entries()) {
     if (files.length >= max) break;
+    if (!isPublicHttpUrl(u)) continue;
     try {
       const r = await fetchRetry(u, { headers: { 'user-agent': 'Mozilla/5.0 (compatible; C8HunterBot/1.0)' } }, { retries: 1, timeoutMs: 20000 });
       const ct = r.headers.get('content-type') || '';
@@ -52,13 +53,19 @@ export async function downloadPhotos(urls, max, buffers = []) {
   return { dir, files };
 }
 
-function runClaude(prompt, { model, maxTurns = 8, allowRead = false, timeoutMs = 300000 }) {
+// SECURITY: listing text is untrusted (prompt injection). Claude runs in an empty temp working directory with a
+// minimal environment (no Telegram/Gmail/Gemini secrets), may only Read files inside the photo folder, and has no
+// shell, write, or web tools. All AI output is redacted before storage.
+function runClaude(prompt, { model, maxTurns = 8, readDir = null, timeoutMs = 300000 }) {
   return new Promise((resolve, reject) => {
+    const cwd = readDir || fs.mkdtempSync(path.join(os.tmpdir(), 'c8c-'));
     const args = ['-p', '--output-format', 'json', '--model', model, '--max-turns', String(maxTurns)];
-    if (allowRead) args.push('--allowedTools', 'Read');
-    args.push('--disallowedTools', 'Bash,Write,Edit,WebFetch,WebSearch,NotebookEdit');
+    if (readDir) args.push('--allowedTools', `Read(/${readDir.replace(/\\/g, '/').replace(/^\/?/, '/')}/**)`);
+    args.push('--disallowedTools', 'Bash,Write,Edit,MultiEdit,WebFetch,WebSearch,NotebookEdit,Task,Glob,Grep');
     const bin = process.env.CLAUDE_BIN || 'claude';
-    const p = spawn(bin, args, { env: { ...process.env, ANTHROPIC_API_KEY: '' }, shell: process.platform === 'win32' });
+    const env = { PATH: process.env.PATH, HOME: process.env.HOME || os.homedir(), USERPROFILE: process.env.USERPROFILE, APPDATA: process.env.APPDATA, TMPDIR: os.tmpdir(), TEMP: process.env.TEMP, TMP: process.env.TMP, SystemRoot: process.env.SystemRoot, CLAUDE_CODE_OAUTH_TOKEN: process.env.CLAUDE_CODE_OAUTH_TOKEN };
+    for (const k of Object.keys(env)) if (env[k] === undefined) delete env[k];
+    const p = spawn(bin, args, { cwd, env, shell: process.platform === 'win32' });
     let out = '', err = '';
     const t = setTimeout(() => { p.kill('SIGKILL'); reject(new Error('claude timed out')); }, timeoutMs);
     p.stdout.on('data', (d) => (out += d)); p.stderr.on('data', (d) => (err += d));
@@ -109,6 +116,7 @@ export function parseJsonLoose(text) {
 
 /** Validate/clean the structured AI answer so the program reads it reliably. */
 export function cleanEval(j) {
+  j = JSON.parse(redact(JSON.stringify(j))); // never store anything secret-looking from AI output
   const arr = (x) => (Array.isArray(x) ? x.filter((y) => typeof y === 'string').map((y) => y.slice(0, 240)).slice(0, 10) : []);
   const tri = (x) => (x === true || x === false ? x : null);
   const opt = (o) => (o && typeof o === 'object' ? { value: o.value ?? null, truth: ['verified', 'claim', 'unknown'].includes(o.truth) ? o.truth : 'unknown', evidence: String(o.evidence || '').slice(0, 160) } : { value: null, truth: 'unknown' });
@@ -142,7 +150,7 @@ export async function aiEvaluate(db, l, s, { userPhotos = [], notify } = {}) {
       const prompt = `${PROMPT()}\n\n## Photos (${files.length}): read each with the Read tool\n${files.join('\n') || '(none)'}\n\n## Listing data\n${data}\n\nReturn only the JSON object.`;
       try {
         db.inc('claude');
-        const text = await runClaude(prompt, { model: s.ai.claude_model, maxTurns: Math.max(4, Math.ceil(files.length / 4) + 3), allowRead: files.length > 0 });
+        const text = await runClaude(prompt, { model: s.ai.claude_model, maxTurns: Math.max(4, Math.ceil(files.length / 4) + 3), readDir: files.length ? dir : null });
         return { tier: 'claude', findings: cleanEval(parseJsonLoose(text)) };
       } catch (e) {
         warn('Claude evaluation failed: ' + e.message);

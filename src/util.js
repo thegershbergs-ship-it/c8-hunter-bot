@@ -58,3 +58,13 @@ export async function fetchRetry(url, opts = {}, { retries = 3, timeoutMs = 3000
 export async function safely(label, fn, errors) {
   try { return await fn(); } catch (e) { warn(`${label}: ${e && e.stack ? e.stack.split('\n').slice(0, 3).join(' | ') : e}`); if (errors) errors.push(`${label}: ${redact(e.message || e)}`); return undefined; }
 }
+
+/** SSRF guard: only http(s) to public hostnames (no localhost, private, link-local or metadata addresses). */
+export function isPublicHttpUrl(url) {
+  let h;
+  try { const x = new URL(url); if (!/^https?:$/.test(x.protocol)) return false; h = x.hostname.toLowerCase().replace(/^\[|\]$/g, ''); } catch { return false; }
+  if (!h || h === 'localhost' || h.endsWith('.localhost') || h.endsWith('.internal') || h.endsWith('.local') || !h.includes('.') && !h.includes(':')) return false;
+  if (/^(0|10|127)\./.test(h) || /^169\.254\./.test(h) || /^192\.168\./.test(h) || /^172\.(1[6-9]|2\d|3[01])\./.test(h) || /^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\./.test(h)) return false;
+  if (h.includes(':') && (/^(::1?|fc|fd|fe80)/.test(h) || h.startsWith('::ffff:'))) return false;
+  return true;
+}

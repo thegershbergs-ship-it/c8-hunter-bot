@@ -285,7 +285,22 @@ async function selfTest() {
     try { const { ImapFlow } = await import('imapflow'); const c = new ImapFlow({ host: 'imap.gmail.com', port: 993, secure: true, auth: { user: process.env.GMAIL_ADDRESS, pass: process.env.GMAIL_APP_PASSWORD }, logger: false }); await c.connect(); const st = await c.status('INBOX', { messages: true, unseen: true }); await c.logout(); lines.push(`✅ Alert inbox connected (${st.messages} emails, ${st.unseen} unread)`); }
     catch (e) { lines.push(`❌ Alert inbox: ${esc(e.message)} (check the app password / 2-step verification)`); }
   } else lines.push('❌ Alert inbox not set up (GMAIL_ADDRESS / GMAIL_APP_PASSWORD secrets)');
-  if (claudeConfigured()) { const r = await claudePing(ctx.s); db.inc('claude'); lines.push(r.ok ? '✅ Claude (your subscription) answered' : `❌ Claude: ${esc((r.error || '').slice(0, 200))}`); if (r.ok) db.d.meta.claudeAuthBroken = null; }
+  if (claudeConfigured()) {
+    const r = await claudePing(ctx.s); db.inc('claude');
+    lines.push(r.ok ? '✅ Claude (your subscription) answered' : `❌ Claude: ${esc((r.error || '').slice(0, 200))}`);
+    if (r.ok) {
+      db.d.meta.claudeAuthBroken = null;
+      // real photo analysis on one real listing (uses 1 of today's evaluations)
+      const sample = db.listings.filter((l) => l.photos?.length >= 5 && l.year).sort((a, b) => (b.photos.length - a.photos.length))[0];
+      if (sample) {
+        const { aiEvaluate } = await import('./ai.js');
+        const ev = await aiEvaluate(db, sample, { ...ctx.s, ai: { ...ctx.s.ai, claude_max_photos: 6 } });
+        const f = ev.findings;
+        lines.push(f ? `✅ Claude photo analysis works (${esc(carTitle(sample))}: Z51 ${f.options.Z51.value ?? '?'} [${f.options.Z51.truth}], photo quality ${esc(f.photoQuality || '?')})` : `❌ Claude photo analysis failed: ${esc(ev.error || ev.tier)}`);
+        if (f) { sample.aiFindings = f; sample.aiAt = nowIso(); }
+      }
+    }
+  }
   else lines.push('➖ Claude token not set (CLAUDE_CODE_OAUTH_TOKEN). AI will use Gemini/rules.');
   if (geminiConfigured()) { const r = await aiText(db, { ...ctx.s, ai: { ...ctx.s.ai, claude_daily_cap: 0 } }, 'Reply with exactly: OK'); lines.push(r.text && /OK/.test(r.text) ? `✅ Gemini backup answered (${esc(r.tier)})` : '❌ Gemini backup did not answer'); }
   else lines.push('➖ Gemini backup not set (optional)');
