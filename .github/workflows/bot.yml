@@ -81,7 +81,8 @@ jobs:
 
       - name: Keepalive note
         if: steps.mode.outputs.mode == 'keepalive'
-        run: date -u +"last alive: %Y-%m-%dT%H:%M:%SZ" > data/alive.txt
+        run: |
+          date -u +"last alive: %Y-%m-%dT%H:%M:%SZ" > data/alive.txt
 
       - name: Save database back to the repo
         if: always()
