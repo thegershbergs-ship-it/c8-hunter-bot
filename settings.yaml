@@ -1,0 +1,124 @@
+# ============================================================================
+#  C8 HUNTER BOT: ALL YOUR CRITERIA LIVE HERE
+#  Edit this file on GitHub (pencil icon) or change values from Telegram with
+#  /set <name> <value>. Lines starting with # are comments.
+#  PRIVATE values (home ZIP, loan rate, down payment, loan length) are NOT here.
+#  They are stored in GitHub Secrets (see SETUP.md step 7).
+# ============================================================================
+
+# --- Price (advertised vehicle price, before tax/registration/dealer fees) ----
+price:
+  ideal_min: 50000          # bottom of the "ideal" band
+  ideal_max: 55000          # top of the "ideal" band
+  max: 57500                # normal hard ceiling
+  exception_max: 58500      # only for exceptional cars; alert says NEEDS YOUR APPROVAL
+  far_below_market_pct: 15  # this % under fair value triggers mandatory scam/damage scrutiny
+  normal_doc_fee_max: 500   # dealer doc fees above this are flagged as junk fees (MA caps nothing; typical $400-500)
+
+# --- Hard requirements --------------------------------------------------------
+hard:
+  max_miles: 50000
+  max_distance_miles: 750   # estimated driving miles from your home ZIP
+  min_model_year: 2020      # C8 generation starts at 2020. Do not lower.
+
+# --- Distance preferences -----------------------------------------------------
+distance:
+  preferred_miles: 500      # full distance points inside this
+  road_factor: 1.2          # straight-line miles x this = estimated driving miles
+
+# --- Financing defaults (PLACEHOLDERS. Your real values go in GitHub Secrets) --
+financing_defaults:
+  apr_pct: 7.5
+  down_payment: 10000
+  months: 72
+
+# --- Preferences (scoring) ----------------------------------------------------
+preferences:
+  body: coupe                       # coupe preferred; convertible only if exceptional
+  convertible_penalty: 4            # points off "options" category for convertibles
+  trims: {1LT: 0, 2LT: 2, 3LT: 3}   # bonus points inside the options category
+  options: {Z51: 3, MagRide: 2, FrontLift: 2, PerfExhaust: 0.5}
+  seats: {Competition: 1, GT2: 0.7, GT1: 0}
+  exterior_preferred: [black, dark red, red, blue, yellow, silver]
+  interior_preferred: [black, tan, caramel, natural, brown, white]
+  color_penalty: 1                  # points off for a non-preferred color (each)
+  owners: {one: 1.0, two: 0.7, three_plus: 0.25}   # share of ownership points
+
+# --- Scoring weights (must add to 100) ----------------------------------------
+weights:
+  history_title: 25
+  price_vs_market: 20
+  mechanical_maintenance: 20
+  mileage_ownership: 15
+  options_trim_colors: 10
+  seller_distance: 10
+
+# --- Classes -------------------------------------------------------------------
+classes:
+  exceptional: 85           # and confidence must be High
+  strong: 75
+  watchlist: 60
+  ai_threshold: 60          # rule score needed before the AI looks at a car
+  ai_max_adjust: 10         # AI can move the score at most this many points
+
+# --- AI usage caps (protect your Claude subscription and Gemini free tier) ----
+ai:
+  claude_daily_cap: 15
+  claude_model: sonnet       # "sonnet" is plenty and lighter on your plan; "opus" is heavier
+  claude_max_photos: 16      # photos sent per car (max 30)
+  gemini_daily_cap: 40
+  gemini_models: [gemini-3.5-flash-lite, gemini-3.8-flash, gemini-2.5-flash-lite]
+  gemini_max_photos: 10
+  question_answers_per_day: 10  # plain-English questions you type to the bot
+
+# --- Alerts --------------------------------------------------------------------
+alerts:
+  quiet_start: "23:00"      # Eastern time
+  quiet_end: "07:00"
+  exceptional_ignores_quiet: true
+  test_mode: true           # true = every alert is prefixed [TEST] (dry run). Set false to go live.
+  paused: false
+  daily_summary: true       # one evening summary of new Watchlist-class cars
+  daily_summary_hour: 19    # Eastern
+
+# --- Listing-page fetching policy per site ------------------------------------
+# never      = the bot will never fetch this site's pages (terms or robots forbid it)
+# on_request = only when YOU ask (Full check button or a pasted link), robots-checked
+# auto       = the bot may fetch automatically (only switch on if you accept the site's terms)
+sites:
+  autotrader: {fetch: on_request}
+  carscom:    {fetch: on_request}
+  cargurus:   {fetch: on_request}
+  carmax:     {fetch: on_request}
+  carvana:    {fetch: on_request}
+  truecar:    {fetch: never}
+  edmunds:    {fetch: never}
+  bringatrailer: {fetch: never}
+  carsandbids:   {fetch: never}
+  facebook:   {fetch: never}
+  dealer:     {fetch: on_request}   # any other website (dealer sites, forums)
+fetch:
+  min_seconds_between_requests_same_site: 3
+  user_agent: "C8HunterBot/1.0 (personal, non-commercial car search; one page at a time)"
+  max_pages_per_run: 25
+
+# --- Transport (rough estimates) -----------------------------------------------
+transport:
+  open_per_mile_short: 1.00
+  enclosed_per_mile_short: 1.50
+  open_per_mile_long: 0.75
+  enclosed_per_mile_long: 1.15
+  long_threshold_miles: 500
+  minimum: 400
+
+# --- Market value ----------------------------------------------------------------
+market:
+  min_comparables: 5
+  comparable_mileage_window: 10000
+  comparable_max_age_days: 120
+  likely_sold_after_days_missing: 3
+  archive_after_days: 180
+
+# --- Learning from your Watch/Reject choices -----------------------------------
+learning:
+  min_ratings_before_suggestions: 20

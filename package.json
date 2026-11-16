@@ -1,0 +1,27 @@
+{
+  "name": "c8-hunter-bot",
+  "version": "1.0.0",
+  "description": "Personal $0 C8 Corvette hunting bot (GitHub Actions + Telegram)",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "node --test test/",
+    "quick": "node src/main.js quick",
+    "sweep": "node src/main.js sweep",
+    "digest": "node src/main.js digest",
+    "selftest": "node src/main.js selftest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "imapflow": "^2.12.1",
+    "mailparser": "^3.14.5",
+    "yaml": "^2.9.1"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}
