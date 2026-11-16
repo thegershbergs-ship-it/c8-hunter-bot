@@ -68,3 +68,28 @@ export function isPublicHttpUrl(url) {
   if (h.includes(':') && (/^(::1?|fc|fd|fe80)/.test(h) || h.startsWith('::ffff:'))) return false;
   return true;
 }
+
+/** Async SSRF guard: URL check + DNS resolution; rejects if ANY resolved address is non-public. */
+export async function isPublicHttpUrlResolved(url) {
+  if (!isPublicHttpUrl(url)) return false;
+  const { lookup } = await import('node:dns/promises');
+  const host = new URL(url).hostname.replace(/^\[|\]$/g, '');
+  try {
+    const addrs = await lookup(host, { all: true });
+    return addrs.length > 0 && addrs.every((a) => isPublicHttpUrl(`http://${a.family === 6 ? `[${a.address}]` : a.address}/`));
+  } catch { return false; }
+}
+
+/** fetch that validates the target and EVERY redirect hop (max 5) against the SSRF guard. */
+export async function safeFetch(url, opts = {}, retryOpts = {}) {
+  let cur = url;
+  for (let hop = 0; hop <= 5; hop++) {
+    if (!(await isPublicHttpUrlResolved(cur))) throw new Error('blocked non-public address');
+    const res = await fetchRetry(cur, { ...opts, redirect: 'manual' }, retryOpts);
+    const loc = res.status >= 300 && res.status < 400 ? res.headers.get('location') : null;
+    if (!loc) return res;
+    try { await res.body?.cancel(); } catch { /* ignore */ }
+    cur = new URL(loc, cur).href;
+  }
+  throw new Error('too many redirects');
+}

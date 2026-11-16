@@ -4,7 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { ROOT } from './config.js';
-import { fetchRetry, warn, log, redact, isPublicHttpUrl } from './util.js';
+import { fetchRetry, warn, log, redact, isPublicHttpUrl, safeFetch } from './util.js';
 
 const PROMPT = () => fs.readFileSync(path.join(ROOT, 'prompts', 'evaluate.md'), 'utf8');
 export const claudeConfigured = () => !!process.env.CLAUDE_CODE_OAUTH_TOKEN && process.env.DISABLE_CLAUDE !== '1';
@@ -41,7 +41,7 @@ export async function downloadPhotos(urls, max, buffers = []) {
     if (files.length >= max) break;
     if (!isPublicHttpUrl(u)) continue;
     try {
-      const r = await fetchRetry(u, { headers: { 'user-agent': 'Mozilla/5.0 (compatible; C8HunterBot/1.0)' } }, { retries: 1, timeoutMs: 20000 });
+      const r = await safeFetch(u, { headers: { 'user-agent': 'Mozilla/5.0 (compatible; C8HunterBot/1.0)' } }, { retries: 1, timeoutMs: 20000 });
       const ct = r.headers.get('content-type') || '';
       if (!r.ok || !/image\/(jpeg|png|webp|gif)/.test(ct)) continue;
       const buf = Buffer.from(await r.arrayBuffer());

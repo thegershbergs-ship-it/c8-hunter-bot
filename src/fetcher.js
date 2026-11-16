@@ -1,7 +1,7 @@
 // Channel 2: polite, robots.txt-respecting fetch of ONE listing page at a time.
 // Policy per site comes from settings.yaml (never | on_request | auto).
 import { siteOf } from './listing.js';
-import { sleep, fetchRetry, isPublicHttpUrl } from './util.js';
+import { sleep, fetchRetry, isPublicHttpUrl, safeFetch } from './util.js';
 
 const robotsCache = new Map();
 const lastHit = new Map();
@@ -62,7 +62,7 @@ export async function politeFetch(url, s, db, { mode = 'auto' } = {}) {
   lastHit.set(u.hostname, Date.now());
   db.inc('pages');
   let res;
-  try { res = await fetchRetry(url, { headers: { 'user-agent': ua, accept: 'text/html' }, redirect: 'follow' }, { retries: 2, timeoutMs: 30000 }); }
+  try { res = await safeFetch(url, { headers: { 'user-agent': ua, accept: 'text/html' } }, { retries: 2, timeoutMs: 30000 }); }
   catch (e) { return { ok: false, reason: 'network error: ' + e.message }; }
   const html = await res.text();
   const blocked = res.status === 403 || res.status === 429 || /captcha|access denied|page unavailable|akamai-block|are you a robot|px-captcha|cf-chl/i.test(html.slice(0, 5000));

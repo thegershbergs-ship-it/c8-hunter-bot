@@ -8,7 +8,7 @@ import { ROOT } from './config.js';
 import { siteOf } from './listing.js';
 import { parseText } from './extract.js';
 import { findVins } from './vin.js';
-import { warn, log, redact, hash } from './util.js';
+import { warn, log, redact, hash, isPublicHttpUrlResolved } from './util.js';
 
 export const PROCESSED_LABEL = 'c8bot-processed';
 
@@ -45,6 +45,7 @@ export function unwrapTracking(href) {
 export async function resolveRedirect(href, hops = 5) {
   let cur = href;
   for (let i = 0; i < hops; i++) {
+    if (!(await isPublicHttpUrlResolved(cur))) return cur;
     let res;
     try { res = await fetch(cur, { method: 'GET', redirect: 'manual', signal: AbortSignal.timeout(15000), headers: { 'user-agent': 'Mozilla/5.0 (compatible; C8HunterBot/1.0)' } }); } catch { return cur; }
     const loc = res.headers.get('location');
