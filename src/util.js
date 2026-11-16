@@ -59,33 +59,67 @@ export async function safely(label, fn, errors) {
   try { return await fn(); } catch (e) { warn(`${label}: ${e && e.stack ? e.stack.split('\n').slice(0, 3).join(' | ') : e}`); if (errors) errors.push(`${label}: ${redact(e.message || e)}`); return undefined; }
 }
 
-/** SSRF guard: only http(s) to public hostnames (no localhost, private, link-local or metadata addresses). */
+// ---------------- SSRF protection ----------------
+// Every outbound fetch of a URL that came from a listing/email/page goes through safeFetch():
+//  - IP-literal hosts are classified with ipaddr.js (only global 'unicast' allowed; IPv4-mapped IPv6 unwrapped;
+//    NAT64/6to4/ULA/link-local/loopback/private/CGNAT/reserved all denied),
+//  - hostnames are checked INSIDE the connection's DNS lookup hook, so the validated address is the one connected to
+//    (no DNS-rebinding window), for every hop and every retry,
+//  - redirects are followed manually (max 5) and each hop is re-validated.
+import ipaddr from 'ipaddr.js';
+import dns from 'node:dns';
+import { Agent, fetch as ufetch } from 'undici';
+
+export function isPublicIp(addr) {
+  if (!ipaddr.isValid(addr)) return false;
+  let ip = ipaddr.parse(addr);
+  if (ip.kind() === 'ipv6' && ip.isIPv4MappedAddress()) ip = ip.toIPv4Address();
+  return ip.range() === 'unicast';
+}
+
+/** Cheap syntactic check (scheme, obvious local names, IP literals). */
 export function isPublicHttpUrl(url) {
   let h;
   try { const x = new URL(url); if (!/^https?:$/.test(x.protocol)) return false; h = x.hostname.toLowerCase().replace(/^\[|\]$/g, ''); } catch { return false; }
-  if (!h || h === 'localhost' || h.endsWith('.localhost') || h.endsWith('.internal') || h.endsWith('.local') || !h.includes('.') && !h.includes(':')) return false;
-  if (/^(0|10|127)\./.test(h) || /^169\.254\./.test(h) || /^192\.168\./.test(h) || /^172\.(1[6-9]|2\d|3[01])\./.test(h) || /^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\./.test(h)) return false;
-  if (h.includes(':') && (/^(::1?|fc|fd|fe80)/.test(h) || h.startsWith('::ffff:'))) return false;
-  return true;
+  if (!h || h === 'localhost' || /\.(localhost|internal|local|lan|home|corp)$/.test(h)) return false;
+  if (ipaddr.isValid(h)) return isPublicIp(h);
+  if (/^\d+$/.test(h) || /^0x/i.test(h)) return false; // integer/hex IP forms
+  return h.includes('.');
 }
 
-/** Async SSRF guard: URL check + DNS resolution; rejects if ANY resolved address is non-public. */
+function safeLookup(hostname, options, cb) {
+  dns.lookup(hostname, { ...options, all: true }, (err, addrs) => {
+    if (err) return cb(err);
+    if (!addrs.length || addrs.some((a) => !isPublicIp(a.address))) return cb(Object.assign(new Error('blocked non-public address'), { code: 'EBLOCKED' }));
+    if (options && options.all) return cb(null, addrs);
+    return cb(null, addrs[0].address, addrs[0].family);
+  });
+}
+const safeAgent = new Agent({ connect: { lookup: safeLookup } });
+export const ssrfAgent = safeAgent;
+
+/** Kept for callers that only want a yes/no before doing work (the real enforcement is in safeFetch). */
 export async function isPublicHttpUrlResolved(url) {
   if (!isPublicHttpUrl(url)) return false;
-  const { lookup } = await import('node:dns/promises');
   const host = new URL(url).hostname.replace(/^\[|\]$/g, '');
-  try {
-    const addrs = await lookup(host, { all: true });
-    return addrs.length > 0 && addrs.every((a) => isPublicHttpUrl(`http://${a.family === 6 ? `[${a.address}]` : a.address}/`));
-  } catch { return false; }
+  if (ipaddr.isValid(host)) return isPublicIp(host);
+  return new Promise((res) => safeLookup(host, { all: true }, (e) => res(!e)));
 }
 
-/** fetch that validates the target and EVERY redirect hop (max 5) against the SSRF guard. */
-export async function safeFetch(url, opts = {}, retryOpts = {}) {
+/** fetch with the SSRF-safe agent; validates every redirect hop; up to 3 retries on temporary errors. */
+export async function safeFetch(url, opts = {}, { retries = 3, timeoutMs = 30000 } = {}) {
   let cur = url;
   for (let hop = 0; hop <= 5; hop++) {
-    if (!(await isPublicHttpUrlResolved(cur))) throw new Error('blocked non-public address');
-    const res = await fetchRetry(cur, { ...opts, redirect: 'manual' }, retryOpts);
+    if (!isPublicHttpUrl(cur)) throw new Error('blocked non-public address');
+    let res, lastErr;
+    for (let i = 0; i <= retries; i++) {
+      try {
+        res = await ufetch(cur, { ...opts, redirect: 'manual', dispatcher: safeAgent, signal: AbortSignal.timeout(timeoutMs) });
+        if ([429, 500, 502, 503, 504].includes(res.status) && i < retries) { await sleep(2000 * 2 ** i); continue; }
+        break;
+      } catch (e) { lastErr = e; if (e?.cause?.code === 'EBLOCKED' || i >= retries) throw e; await sleep(2000 * 2 ** i); }
+    }
+    if (!res) throw lastErr;
     const loc = res.status >= 300 && res.status < 400 ? res.headers.get('location') : null;
     if (!loc) return res;
     try { await res.body?.cancel(); } catch { /* ignore */ }

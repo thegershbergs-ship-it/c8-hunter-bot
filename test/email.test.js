@@ -54,3 +54,11 @@ test('AI answer parsing is defensive', () => {
   assert.equal(c.scoreAdjust, 10); assert.equal(c.options.Z51.truth, 'unknown'); assert.equal(c.scamRisk, 'Low'); assert.deepEqual(c.perfMods, ['tune']);
   assert.equal(c.options.MagRide.value, null);
 });
+
+test('SSRF: IP classification incl. mapped/NAT64/6to4 and DNS-resolved blocking', async () => {
+  const { isPublicIp, safeFetch } = await import('../src/util.js');
+  for (const bad of ['127.0.0.1', '10.0.0.1', '100.64.0.1', '169.254.169.254', '::1', 'fd00::1', 'fe80::1', '::ffff:127.0.0.1', '64:ff9b::7f00:1', '2002:7f00:1::', '0.0.0.0']) assert.equal(isPublicIp(bad), false, bad);
+  assert.equal(isPublicIp('8.8.8.8'), true);
+  assert.equal(isPublicHttpUrl('http://2130706433/'), false);
+  await assert.rejects(safeFetch('http://localtest.me/', {}, { retries: 0, timeoutMs: 5000 }));
+});
