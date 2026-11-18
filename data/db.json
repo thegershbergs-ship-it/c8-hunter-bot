@@ -3196,9 +3196,11 @@
    "failCount": 0
   },
   "usedcorvettesforsale": {
-   "failCount": 0,
+   "failCount": 1,
    "status": "OK",
-   "lastSuccess": "2026-11-17T17:51:50.368Z"
+   "lastSuccess": "2026-11-17T17:51:50.368Z",
+   "lastError": "no listings found on index page (layout change?)",
+   "lastErrorAt": "2026-11-18T02:35:33.449Z"
   }
  },
  "usage": {
@@ -3215,7 +3217,7 @@
    "claude": 0,
    "gemini": 0,
    "emails": 0,
-   "pages": 5,
+   "pages": 7,
    "questions": 0,
    "telegramSent": 0,
    "nhtsa": 0
@@ -3337,8 +3339,8 @@
  "meta": {
   "created": "2026-11-16T20:43:02.457Z",
   "lastRun": {
-   "sweep": "2026-11-17T17:51:50.379Z",
-   "quick": "2026-11-17T21:44:33.030Z"
+   "sweep": "2026-11-18T02:35:33.449Z",
+   "quick": "2026-11-18T02:35:33.450Z"
   },
   "runLog": [
    {
@@ -3441,6 +3443,19 @@
     "evaluated": 0,
     "ai": 0,
     "end": "2026-11-17T21:44:33.030Z",
+    "errors": 0,
+    "claudeToday": 0,
+    "errorSamples": []
+   },
+   {
+    "mode": "sweep",
+    "start": "2026-11-18T02:35:30.250Z",
+    "emails": 0,
+    "newListings": 0,
+    "alerts": 0,
+    "evaluated": 0,
+    "ai": 0,
+    "end": "2026-11-18T02:35:33.450Z",
     "errors": 0,
     "claudeToday": 0,
     "errorSamples": []
