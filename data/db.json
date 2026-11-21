@@ -3378,7 +3378,7 @@
   "created": "2026-11-16T20:43:02.457Z",
   "lastRun": {
    "sweep": "2026-11-21T16:22:49.358Z",
-   "quick": "2026-11-21T16:22:49.359Z"
+   "quick": "2026-11-21T17:21:31.428Z"
   },
   "runLog": [
    {
@@ -3754,6 +3754,19 @@
     "evaluated": 0,
     "ai": 0,
     "end": "2026-11-21T16:22:49.359Z",
+    "errors": 0,
+    "claudeToday": 0,
+    "errorSamples": []
+   },
+   {
+    "mode": "quick",
+    "start": "2026-11-21T17:21:31.393Z",
+    "emails": 0,
+    "newListings": 0,
+    "alerts": 0,
+    "evaluated": 0,
+    "ai": 0,
+    "end": "2026-11-21T17:21:31.428Z",
     "errors": 0,
     "claudeToday": 0,
     "errorSamples": []
