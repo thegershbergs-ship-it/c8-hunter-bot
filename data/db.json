@@ -3400,6 +3400,15 @@
    "questions": 0,
    "telegramSent": 0,
    "nhtsa": 0
+  },
+  "2026-11-24": {
+   "claude": 0,
+   "gemini": 0,
+   "emails": 0,
+   "pages": 0,
+   "questions": 0,
+   "telegramSent": 0,
+   "nhtsa": 0
   }
  },
  "telegram": {
@@ -3519,7 +3528,7 @@
   "created": "2026-11-16T20:43:02.457Z",
   "lastRun": {
    "sweep": "2026-11-24T03:02:26.790Z",
-   "quick": "2026-11-24T03:02:26.791Z",
+   "quick": "2026-11-24T05:54:11.528Z",
    "digest": "2026-11-22T19:46:14.286Z"
   },
   "runLog": [
@@ -4091,6 +4100,19 @@
     "evaluated": 0,
     "ai": 0,
     "end": "2026-11-24T03:02:26.791Z",
+    "errors": 0,
+    "claudeToday": 0,
+    "errorSamples": []
+   },
+   {
+    "mode": "quick",
+    "start": "2026-11-24T05:54:11.492Z",
+    "emails": 0,
+    "newListings": 0,
+    "alerts": 0,
+    "evaluated": 0,
+    "ai": 0,
+    "end": "2026-11-24T05:54:11.528Z",
     "errors": 0,
     "claudeToday": 0,
     "errorSamples": []
