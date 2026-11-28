@@ -3566,23 +3566,10 @@
   "created": "2026-11-16T20:43:02.457Z",
   "lastRun": {
    "sweep": "2026-11-28T17:10:51.005Z",
-   "quick": "2026-11-28T17:10:51.005Z",
+   "quick": "2026-11-28T18:49:40.720Z",
    "digest": "2026-11-22T19:46:14.286Z"
   },
   "runLog": [
-   {
-    "mode": "sweep",
-    "start": "2026-11-17T17:51:43.985Z",
-    "emails": 0,
-    "newListings": 1,
-    "alerts": 0,
-    "evaluated": 1,
-    "ai": 0,
-    "end": "2026-11-17T17:51:50.379Z",
-    "errors": 0,
-    "claudeToday": 0,
-    "errorSamples": []
-   },
    {
     "mode": "quick",
     "start": "2026-11-17T21:44:33.007Z",
@@ -4346,6 +4333,19 @@
     "evaluated": 0,
     "ai": 0,
     "end": "2026-11-28T17:10:51.005Z",
+    "errors": 0,
+    "claudeToday": 0,
+    "errorSamples": []
+   },
+   {
+    "mode": "quick",
+    "start": "2026-11-28T18:49:40.672Z",
+    "emails": 0,
+    "newListings": 0,
+    "alerts": 0,
+    "evaluated": 0,
+    "ai": 0,
+    "end": "2026-11-28T18:49:40.720Z",
     "errors": 0,
     "claudeToday": 0,
     "errorSamples": []
